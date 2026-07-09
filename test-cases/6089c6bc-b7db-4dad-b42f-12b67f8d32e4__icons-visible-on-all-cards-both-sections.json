@@ -1,0 +1,65 @@
+{
+  "id": "icons-visible-on-all-cards-both-sections",
+  "testPlanId": "6089c6bc-b7db-4dad-b42f-12b67f8d32e4",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Articles — End-to-End Journeys",
+  "case": {
+    "id": "icons-visible-on-all-cards-both-sections",
+    "title": "Bookmark icon visible on every news card in Featured and Latest sections",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA home",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Featured News section visible",
+        "locatorHint": "[data-testid='featured-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s3",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Featured News has at least one article card",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']"
+      },
+      {
+        "id": "s4",
+        "action": "assertCount",
+        "targetDescription": "No Featured News card is missing a bookmark icon",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:not(:has([data-testid='bookmark-toggle']))"
+      },
+      {
+        "id": "s5",
+        "action": "waitForVisible",
+        "targetDescription": "Latest News section visible",
+        "locatorHint": "[data-testid='latest-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s6",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Latest News has at least one article card",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']"
+      },
+      {
+        "id": "s7",
+        "action": "assertCount",
+        "targetDescription": "No Latest News card is missing a bookmark icon",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:not(:has([data-testid='bookmark-toggle']))"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}

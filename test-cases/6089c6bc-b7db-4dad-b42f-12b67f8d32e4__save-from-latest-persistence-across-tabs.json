@@ -1,0 +1,175 @@
+{
+  "id": "save-from-latest-persistence-across-tabs",
+  "testPlanId": "6089c6bc-b7db-4dad-b42f-12b67f8d32e4",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Articles — End-to-End Journeys",
+  "case": {
+    "id": "save-from-latest-persistence-across-tabs",
+    "title": "Save from Latest and verify persistence across tabs and presence in Saved News",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA home",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Latest News section visible",
+        "locatorHint": "[data-testid='latest-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s3",
+        "action": "scrollIntoView",
+        "targetDescription": "Latest card with title 'Take the next step in your development at UKG'",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s4",
+        "action": "assertVisible",
+        "targetDescription": "Bookmark toggle is currently unsaved on Latest card",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='false']"
+      },
+      {
+        "id": "s5",
+        "action": "tap",
+        "targetDescription": "Save the article from Latest",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s6",
+        "action": "assertVisible",
+        "targetDescription": "Latest card shows saved state",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s7",
+        "action": "switchToNewTab",
+        "targetDescription": "Open a new browser tab"
+      },
+      {
+        "id": "s8",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA home in new tab",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s9",
+        "action": "tap",
+        "targetDescription": "Open profile menu in new tab",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s10",
+        "action": "tap",
+        "targetDescription": "Open 'My saved news' from profile in new tab",
+        "locatorHint": "[data-testid='menu-item-saved-news']"
+      },
+      {
+        "id": "s11",
+        "action": "waitForVisible",
+        "targetDescription": "Saved news list visible in new tab",
+        "locatorHint": "[data-testid='saved-news-list']",
+        "value": "10000"
+      },
+      {
+        "id": "s12",
+        "action": "assertVisible",
+        "targetDescription": "Saved list contains the recently saved article in new tab",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s13",
+        "action": "tap",
+        "targetDescription": "Open the saved item from new tab to verify it loads",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s14",
+        "action": "waitForVisible",
+        "targetDescription": "Article title visible in new tab",
+        "locatorHint": "[data-testid='article-title']",
+        "value": "10000"
+      },
+      {
+        "id": "s15",
+        "action": "assertText",
+        "targetDescription": "Article title matches in new tab",
+        "locatorHint": "[data-testid='article-title']",
+        "assertion": "Take the next step in your development at UKG"
+      },
+      {
+        "id": "s16",
+        "action": "closeTab",
+        "targetDescription": "Close the new tab"
+      },
+      {
+        "id": "s17",
+        "action": "waitForVisible",
+        "targetDescription": "Latest section visible in original tab",
+        "locatorHint": "[data-testid='latest-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s18",
+        "action": "assertVisible",
+        "targetDescription": "Original tab still shows saved state on Latest card",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s19",
+        "action": "tap",
+        "targetDescription": "Open profile menu (original tab)",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s20",
+        "action": "tap",
+        "targetDescription": "Open 'My saved news' (original tab)",
+        "locatorHint": "[data-testid='menu-item-saved-news']"
+      },
+      {
+        "id": "s21",
+        "action": "waitForVisible",
+        "targetDescription": "Saved news list visible (original tab)",
+        "locatorHint": "[data-testid='saved-news-list']",
+        "value": "10000"
+      },
+      {
+        "id": "s22",
+        "action": "assertVisible",
+        "targetDescription": "Saved list contains the article (original tab)",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s23",
+        "action": "openUrl",
+        "targetDescription": "Return to home to clean up by unsaving from Latest",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s24",
+        "action": "tap",
+        "targetDescription": "Unsave from Latest card",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s25",
+        "action": "assertVisible",
+        "targetDescription": "Latest card shows unsaved state after cleanup",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='false']"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}

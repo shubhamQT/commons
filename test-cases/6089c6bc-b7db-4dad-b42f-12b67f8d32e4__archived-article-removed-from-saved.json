@@ -1,0 +1,139 @@
+{
+  "id": "archived-article-removed-from-saved",
+  "testPlanId": "6089c6bc-b7db-4dad-b42f-12b67f8d32e4",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Articles — End-to-End Journeys",
+  "case": {
+    "id": "archived-article-removed-from-saved",
+    "title": "Archiving an article removes it automatically from Saved News",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA home",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "scrollIntoView",
+        "targetDescription": "Locate the news card anywhere with title 'Take the next step in your development at UKG'",
+        "locatorHint": "[data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s3",
+        "action": "assertVisible",
+        "targetDescription": "Ensure article is currently unsaved before proceeding",
+        "locatorHint": "[data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='false']"
+      },
+      {
+        "id": "s4",
+        "action": "tap",
+        "targetDescription": "Save the article from its card",
+        "locatorHint": "[data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s5",
+        "action": "assertVisible",
+        "targetDescription": "Saved state confirmed on the card",
+        "locatorHint": "[data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s6",
+        "action": "tap",
+        "targetDescription": "Open the article detail from the card",
+        "locatorHint": "[data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='news-title']"
+      },
+      {
+        "id": "s7",
+        "action": "waitForVisible",
+        "targetDescription": "Article page title visible",
+        "locatorHint": "[data-testid='article-title']",
+        "value": "10000"
+      },
+      {
+        "id": "s8",
+        "action": "assertText",
+        "targetDescription": "Confirm correct article opened",
+        "locatorHint": "[data-testid='article-title']",
+        "assertion": "Take the next step in your development at UKG"
+      },
+      {
+        "id": "s9",
+        "action": "tap",
+        "targetDescription": "Archive the article via QA admin control",
+        "locatorHint": "[data-testid='qa-archive-article']"
+      },
+      {
+        "id": "s10",
+        "action": "waitForVisible",
+        "targetDescription": "Archive confirmation toast visible",
+        "locatorHint": "[data-testid='toast']",
+        "value": "10000"
+      },
+      {
+        "id": "s11",
+        "action": "assertContainsText",
+        "targetDescription": "Toast indicates article archived",
+        "locatorHint": "[data-testid='toast']",
+        "assertion": "archiv"
+      },
+      {
+        "id": "s12",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s13",
+        "action": "tap",
+        "targetDescription": "Open 'My saved news'",
+        "locatorHint": "[data-testid='menu-item-saved-news']"
+      },
+      {
+        "id": "s14",
+        "action": "waitForVisible",
+        "targetDescription": "Saved news list visible",
+        "locatorHint": "[data-testid='saved-news-list']",
+        "value": "10000"
+      },
+      {
+        "id": "s15",
+        "action": "assertCount",
+        "targetDescription": "Archived article is no longer present in saved list",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s16",
+        "action": "back",
+        "targetDescription": "Return to article page to unarchive for cleanup"
+      },
+      {
+        "id": "s17",
+        "action": "tap",
+        "targetDescription": "Unarchive the article via QA admin control (cleanup)",
+        "locatorHint": "[data-testid='qa-unarchive-article']"
+      },
+      {
+        "id": "s18",
+        "action": "openUrl",
+        "targetDescription": "Return to home to confirm card state",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s19",
+        "action": "assertVisible",
+        "targetDescription": "Card shows unsaved state after archive/remove cycle",
+        "locatorHint": "[data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='false']"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}

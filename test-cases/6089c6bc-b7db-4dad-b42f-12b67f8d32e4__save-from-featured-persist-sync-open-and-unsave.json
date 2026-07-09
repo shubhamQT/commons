@@ -1,0 +1,171 @@
+{
+  "id": "save-from-featured-persist-sync-open-and-unsave",
+  "testPlanId": "6089c6bc-b7db-4dad-b42f-12b67f8d32e4",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Articles — End-to-End Journeys",
+  "case": {
+    "id": "save-from-featured-persist-sync-open-and-unsave",
+    "title": "Save from Featured, verify synced state, persistence, open from Saved, then unsave removes immediately",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA home",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Featured News section visible",
+        "locatorHint": "[data-testid='featured-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s3",
+        "action": "scrollIntoView",
+        "targetDescription": "Featured card with title 'Take the next step in your development at UKG'",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s4",
+        "action": "assertVisible",
+        "targetDescription": "Bookmark toggle shown and currently unsaved on Featured card",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='false']"
+      },
+      {
+        "id": "s5",
+        "action": "tap",
+        "targetDescription": "Save the article from Featured by tapping bookmark toggle",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s6",
+        "action": "assertVisible",
+        "targetDescription": "Bookmark toggle now indicates saved (filled)",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s7",
+        "action": "scrollIntoView",
+        "targetDescription": "Latest News section",
+        "locatorHint": "[data-testid='latest-news-section']"
+      },
+      {
+        "id": "s8",
+        "action": "waitForVisible",
+        "targetDescription": "Latest News ready",
+        "locatorHint": "[data-testid='latest-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s9",
+        "action": "assertVisible",
+        "targetDescription": "Same article in Latest shows saved state",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s10",
+        "action": "openUrl",
+        "targetDescription": "Reload home to verify persistence",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s11",
+        "action": "waitForVisible",
+        "targetDescription": "Featured section visible after reload",
+        "locatorHint": "[data-testid='featured-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s12",
+        "action": "assertVisible",
+        "targetDescription": "Featured card still shows saved state after reload",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s13",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s14",
+        "action": "tap",
+        "targetDescription": "Open 'My saved news' from profile menu",
+        "locatorHint": "[data-testid='menu-item-saved-news']"
+      },
+      {
+        "id": "s15",
+        "action": "waitForVisible",
+        "targetDescription": "Saved news list visible",
+        "locatorHint": "[data-testid='saved-news-list']",
+        "value": "10000"
+      },
+      {
+        "id": "s16",
+        "action": "assertVisible",
+        "targetDescription": "Saved list contains the article",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s17",
+        "action": "tap",
+        "targetDescription": "Open the saved item to view full article",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s18",
+        "action": "waitForVisible",
+        "targetDescription": "Article title displayed on detail page",
+        "locatorHint": "[data-testid='article-title']",
+        "value": "10000"
+      },
+      {
+        "id": "s19",
+        "action": "assertText",
+        "targetDescription": "Article title matches saved item",
+        "locatorHint": "[data-testid='article-title']",
+        "assertion": "Take the next step in your development at UKG"
+      },
+      {
+        "id": "s20",
+        "action": "back",
+        "targetDescription": "Return to Saved News list"
+      },
+      {
+        "id": "s21",
+        "action": "tap",
+        "targetDescription": "Unsave the item from Saved News list",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='true']"
+      },
+      {
+        "id": "s22",
+        "action": "waitForHidden",
+        "targetDescription": "Saved item disappears immediately from the list",
+        "locatorHint": "[data-testid='saved-news-item']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG'))",
+        "value": "10000"
+      },
+      {
+        "id": "s23",
+        "action": "openUrl",
+        "targetDescription": "Back to home to confirm unsaved state",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s24",
+        "action": "assertVisible",
+        "targetDescription": "Featured card shows unsaved state after removal",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='news-card']:has([data-testid='news-title']:text-is('Take the next step in your development at UKG')) [data-testid='bookmark-toggle'][aria-pressed='false']"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}
