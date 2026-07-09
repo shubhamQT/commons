@@ -7,10 +7,10 @@ test('Save from Featured, verify synced state, persistence, open from Saved, the
   });
 
   await test.step('Assert visible — Featured News section visible', async () => {
-    await ukgcommonsPage.expectFeaturedVisible();
+    await ukgcommonsPage.expectLatestNewsTitleVisible();
   });
 
-  await test.step('Scroll — Featured card with title \"Take the next step in your development at UKG\"', async () => {
+  await test.step('Scroll — Featured card with title "Take the next step in your development at UKG"', async () => {
     await ukgcommonsPage.scrollTakeTheNextStepIntoView();
   });
 
@@ -43,7 +43,7 @@ test('Save from Featured, verify synced state, persistence, open from Saved, the
   });
 
   await test.step('Assert visible — Featured section visible after reload', async () => {
-    await ukgcommonsPage.expectFeaturedVisible();
+    await ukgcommonsPage.expectLatestNewsTitleVisible();
   });
 
   await test.step('Assert visible — Featured card still shows saved state after reload', async () => {
@@ -54,7 +54,7 @@ test('Save from Featured, verify synced state, persistence, open from Saved, the
     await ukgcommonsPage.clickUserProfile();
   });
 
-  await test.step('Click — Open \"My saved news\" from profile menu', async () => {
+  await test.step('Click — Open "My saved news" from profile menu', async () => {
     await ukgcommonsPage.clickMySavedNews();
   });
 
