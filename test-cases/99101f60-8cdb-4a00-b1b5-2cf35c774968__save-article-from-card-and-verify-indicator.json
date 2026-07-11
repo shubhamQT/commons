@@ -1,0 +1,69 @@
+{
+  "id": "save-article-from-card-and-verify-indicator",
+  "testPlanId": "99101f60-8cdb-4a00-b1b5-2cf35c774968",
+  "requirementId": "8186accb-be80-4df7-a765-9df9c34b80a9",
+  "suiteName": "UKG Commons Demo — Save News Articles (Functional)",
+  "case": {
+    "id": "save-article-from-card-and-verify-indicator",
+    "title": "Tap bookmark on a news card marks it Saved and shows filled icon",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "open-home",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "wait-feed",
+        "action": "waitForVisible",
+        "targetDescription": "Wait for news feed",
+        "locatorHint": "[data-testid='news-feed']"
+      },
+      {
+        "id": "scroll-target-card",
+        "action": "scrollIntoView",
+        "targetDescription": "Scroll to specific article card",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "assert-bookmark-visible",
+        "action": "assertVisible",
+        "targetDescription": "Verify unsaved bookmark icon is visible on the card",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark']"
+      },
+      {
+        "id": "tap-save",
+        "action": "tap",
+        "targetDescription": "Tap bookmark to save the article",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark']"
+      },
+      {
+        "id": "assert-filled-icon",
+        "action": "assertVisible",
+        "targetDescription": "Verify filled bookmark icon indicates Saved",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark--filled']"
+      },
+      {
+        "id": "cleanup-unsave",
+        "action": "tap",
+        "targetDescription": "Cleanup: tap filled bookmark to unsave",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark--filled']"
+      },
+      {
+        "id": "assert-outline-restored",
+        "action": "assertVisible",
+        "targetDescription": "Verify unsaved (outline) bookmark is restored",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark']"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "archived-or-deleted-article-removed-from-saved",
+  "testPlanId": "99101f60-8cdb-4a00-b1b5-2cf35c774968",
+  "requirementId": "8186accb-be80-4df7-a765-9df9c34b80a9",
+  "suiteName": "UKG Commons Demo — Save News Articles (Functional)",
+  "case": {
+    "id": "archived-or-deleted-article-removed-from-saved",
+    "title": "Archived or deleted article disappears from the user's Saved News list",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [
+      "CMS has archived or deleted an article previously saved by the user with title 'Archived: Test Article'"
+    ],
+    "steps": [
+      {
+        "id": "open-home",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "open-profile-menu",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "[data-testid='profile-menu-button']"
+      },
+      {
+        "id": "go-to-saved",
+        "action": "tap",
+        "targetDescription": "Navigate to 'My saved news'",
+        "locatorHint": "[data-testid='menu-saved-news']"
+      },
+      {
+        "id": "wait-saved-list",
+        "action": "waitForVisible",
+        "targetDescription": "Wait for Saved News list to load",
+        "locatorHint": "[data-testid='saved-news-list']"
+      },
+      {
+        "id": "assert-archived-not-present",
+        "action": "assertHidden",
+        "targetDescription": "Verify the archived/deleted saved article no longer appears in the list",
+        "locatorHint": "[data-testid='saved-news-item']:has-text('Archived: Test Article')"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

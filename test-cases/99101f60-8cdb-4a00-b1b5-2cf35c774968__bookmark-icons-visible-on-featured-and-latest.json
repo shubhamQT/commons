@@ -1,0 +1,69 @@
+{
+  "id": "bookmark-icons-visible-on-featured-and-latest",
+  "testPlanId": "99101f60-8cdb-4a00-b1b5-2cf35c774968",
+  "requirementId": "8186accb-be80-4df7-a765-9df9c34b80a9",
+  "suiteName": "UKG Commons Demo — Save News Articles (Functional)",
+  "case": {
+    "id": "bookmark-icons-visible-on-featured-and-latest",
+    "title": "Bookmark icon is visible on each news article card in Featured and Latest sections",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "step-open-url",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "step-wait-feed",
+        "action": "waitForVisible",
+        "targetDescription": "Wait for news feed to load",
+        "locatorHint": "[data-testid='news-feed']"
+      },
+      {
+        "id": "step-scroll-featured",
+        "action": "scrollIntoView",
+        "targetDescription": "Scroll to Featured News section",
+        "locatorHint": "[data-testid='section-featured']"
+      },
+      {
+        "id": "step-assert-featured-cards-exist",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Verify there is at least 1 news card in Featured",
+        "locatorHint": "[data-testid='section-featured'] [data-testid='news-card']"
+      },
+      {
+        "id": "step-assert-featured-bookmarks-exist",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Verify at least 1 bookmark icon is visible in Featured",
+        "locatorHint": "[data-testid='section-featured'] [data-testid='news-card'] [data-testid='bookmark']"
+      },
+      {
+        "id": "step-scroll-latest",
+        "action": "scrollIntoView",
+        "targetDescription": "Scroll to Latest News section",
+        "locatorHint": "[data-testid='section-latest']"
+      },
+      {
+        "id": "step-assert-latest-cards-exist",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Verify there is at least 1 news card in Latest",
+        "locatorHint": "[data-testid='section-latest'] [data-testid='news-card']"
+      },
+      {
+        "id": "step-assert-latest-bookmarks-exist",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Verify at least 1 bookmark icon is visible in Latest",
+        "locatorHint": "[data-testid='section-latest'] [data-testid='news-card'] [data-testid='bookmark']"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}
