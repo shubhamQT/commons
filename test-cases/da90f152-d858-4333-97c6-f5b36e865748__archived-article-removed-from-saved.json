@@ -1,0 +1,86 @@
+{
+  "id": "archived-article-removed-from-saved",
+  "testPlanId": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional Happy Paths",
+  "case": {
+    "id": "archived-article-removed-from-saved",
+    "title": "Saved article disappears from My saved news after it is archived",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Latest or Featured sections ready",
+        "locatorHint": "[data-testid='news-home']"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Save 'QA Fixture: Archive Me' via its card bookmark",
+        "locatorHint": "[data-testid='news-home'] [data-testid='news-card']:has-text('QA Fixture: Archive Me') [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s4",
+        "action": "openUrl",
+        "targetDescription": "Trigger archive for QA fixture via QA utility URL",
+        "value": "https://commons-qa.util.ukg.com/qa-utils/archive?slug=qa-fixture-archive-me"
+      },
+      {
+        "id": "s5",
+        "action": "wait",
+        "targetDescription": "Wait for archive to process"
+      },
+      {
+        "id": "s6",
+        "action": "openUrl",
+        "targetDescription": "Return to homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s7",
+        "action": "waitForVisible",
+        "targetDescription": "Header/profile available",
+        "locatorHint": "[data-testid='profile-menu-button']"
+      },
+      {
+        "id": "s8",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "[data-testid='profile-menu-button']"
+      },
+      {
+        "id": "s9",
+        "action": "tap",
+        "targetDescription": "Go to My saved news",
+        "locatorHint": "[data-testid='menu-saved-news']"
+      },
+      {
+        "id": "s10",
+        "action": "waitForVisible",
+        "targetDescription": "Saved News page",
+        "locatorHint": "[data-testid='saved-news-page']"
+      },
+      {
+        "id": "s11",
+        "action": "assertHidden",
+        "targetDescription": "'QA Fixture: Archive Me' no longer appears in Saved list",
+        "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Archive Me')"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

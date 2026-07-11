@@ -1,0 +1,57 @@
+{
+  "id": "featured-bookmark-icon-visible",
+  "testPlanId": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional Happy Paths",
+  "case": {
+    "id": "featured-bookmark-icon-visible",
+    "title": "Featured News cards show bookmark icon on each card",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Featured section becomes visible",
+        "locatorHint": "[data-testid='featured-news-section']"
+      },
+      {
+        "id": "s3",
+        "action": "scrollIntoView",
+        "targetDescription": "Scroll to Featured section",
+        "locatorHint": "[data-testid='featured-news-section']"
+      },
+      {
+        "id": "s4",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Featured article cards exist",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']"
+      },
+      {
+        "id": "s5",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Bookmark icons present on Featured cards",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card'] [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s6",
+        "action": "assertVisible",
+        "targetDescription": "Bookmark icon visible on the first Featured card",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:nth-of-type(1) [data-testid='bookmark-toggle']"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

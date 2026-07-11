@@ -1,0 +1,69 @@
+{
+  "id": "unsave-from-saved-list-removes-immediately",
+  "testPlanId": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional Happy Paths",
+  "case": {
+    "id": "unsave-from-saved-list-removes-immediately",
+    "title": "Unsave an item from My saved news removes it immediately",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Featured section ready",
+        "locatorHint": "[data-testid='featured-news-section']"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Save 'QA Fixture: Save Me' if needed",
+        "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:has-text('QA Fixture: Save Me') [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s4",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "[data-testid='profile-menu-button']"
+      },
+      {
+        "id": "s5",
+        "action": "tap",
+        "targetDescription": "Go to My saved news",
+        "locatorHint": "[data-testid='menu-saved-news']"
+      },
+      {
+        "id": "s6",
+        "action": "waitForVisible",
+        "targetDescription": "Saved News page",
+        "locatorHint": "[data-testid='saved-news-page']"
+      },
+      {
+        "id": "s7",
+        "action": "tap",
+        "targetDescription": "Tap filled bookmark to unsave 'QA Fixture: Save Me'",
+        "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Save Me') [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s8",
+        "action": "waitForHidden",
+        "targetDescription": "'QA Fixture: Save Me' disappears from Saved list",
+        "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Save Me')"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "latest-bookmark-icon-visible",
+  "testPlanId": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional Happy Paths",
+  "case": {
+    "id": "latest-bookmark-icon-visible",
+    "title": "Latest News cards show bookmark icon on each card",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Latest section becomes visible",
+        "locatorHint": "[data-testid='latest-news-section']"
+      },
+      {
+        "id": "s3",
+        "action": "scrollIntoView",
+        "targetDescription": "Scroll to Latest section",
+        "locatorHint": "[data-testid='latest-news-section']"
+      },
+      {
+        "id": "s4",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Latest article cards exist",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']"
+      },
+      {
+        "id": "s5",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Bookmark icons present on Latest cards",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card'] [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s6",
+        "action": "assertVisible",
+        "targetDescription": "Bookmark icon visible on the first Latest card",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']:nth-of-type(1) [data-testid='bookmark-toggle']"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

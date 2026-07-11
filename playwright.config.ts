@@ -35,7 +35,6 @@ export default defineConfig({
   fullyParallel: Boolean(env.fullyParallel ?? false),
   workers:       Number(env.workers        ?? 1),
   use: {
-    storageState:  ".auth/jaga23.json",
     baseURL:       String(env.baseURL       ?? "https://example.com"),
     headless:      env.headless !== false,
     trace:         (String(env.trace        ?? "retain-on-failure")) as "off" | "on" | "retain-on-failure" | "on-all-retries",

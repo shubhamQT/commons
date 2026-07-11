@@ -1,0 +1,81 @@
+{
+  "id": "saved-persists-across-new-tab",
+  "testPlanId": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional Happy Paths",
+  "case": {
+    "id": "saved-persists-across-new-tab",
+    "title": "Saved items persist across a new tab (session sync)",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Latest section loaded",
+        "locatorHint": "[data-testid='latest-news-section']"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Save 'QA Fixture: Cross-Device' on its Latest card",
+        "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']:has-text('QA Fixture: Cross-Device') [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s4",
+        "action": "switchToNewTab",
+        "targetDescription": "Open a new browser tab"
+      },
+      {
+        "id": "s5",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage in new tab",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s6",
+        "action": "waitForVisible",
+        "targetDescription": "Header/profile available",
+        "locatorHint": "[data-testid='profile-menu-button']"
+      },
+      {
+        "id": "s7",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "[data-testid='profile-menu-button']"
+      },
+      {
+        "id": "s8",
+        "action": "tap",
+        "targetDescription": "Go to My saved news",
+        "locatorHint": "[data-testid='menu-saved-news']"
+      },
+      {
+        "id": "s9",
+        "action": "waitForVisible",
+        "targetDescription": "Saved News page",
+        "locatorHint": "[data-testid='saved-news-page']"
+      },
+      {
+        "id": "s10",
+        "action": "assertContainsText",
+        "targetDescription": "'QA Fixture: Cross-Device' is present in Saved list in new tab",
+        "locatorHint": "[data-testid='saved-news-page']",
+        "assertion": "QA Fixture: Cross-Device"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

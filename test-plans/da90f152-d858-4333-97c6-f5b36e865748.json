@@ -1,0 +1,710 @@
+{
+  "id": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "model": "gpt-5",
+  "createdAt": "2026-07-11T18:41:06.852Z",
+  "plan": {
+    "version": 1,
+    "suiteName": "Save News Article Card — Functional Happy Paths",
+    "cases": [
+      {
+        "id": "login-and-sections-visible",
+        "title": "Login and verify Featured and Latest sections render",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage (SSO via auth file)",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed container",
+            "locatorHint": "[data-testid='news-home']"
+          },
+          {
+            "id": "s3",
+            "action": "assertVisible",
+            "targetDescription": "Featured News section",
+            "locatorHint": "[data-testid='featured-news-section']"
+          },
+          {
+            "id": "s4",
+            "action": "assertVisible",
+            "targetDescription": "Latest News section",
+            "locatorHint": "[data-testid='latest-news-section']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "featured-bookmark-icon-visible",
+        "title": "Featured News cards show bookmark icon on each card",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Featured section becomes visible",
+            "locatorHint": "[data-testid='featured-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to Featured section",
+            "locatorHint": "[data-testid='featured-news-section']"
+          },
+          {
+            "id": "s4",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Featured article cards exist",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']"
+          },
+          {
+            "id": "s5",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Bookmark icons present on Featured cards",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card'] [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s6",
+            "action": "assertVisible",
+            "targetDescription": "Bookmark icon visible on the first Featured card",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:nth-of-type(1) [data-testid='bookmark-toggle']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "latest-bookmark-icon-visible",
+        "title": "Latest News cards show bookmark icon on each card",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Latest section becomes visible",
+            "locatorHint": "[data-testid='latest-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to Latest section",
+            "locatorHint": "[data-testid='latest-news-section']"
+          },
+          {
+            "id": "s4",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Latest article cards exist",
+            "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']"
+          },
+          {
+            "id": "s5",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Bookmark icons present on Latest cards",
+            "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card'] [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s6",
+            "action": "assertVisible",
+            "targetDescription": "Bookmark icon visible on the first Latest card",
+            "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']:nth-of-type(1) [data-testid='bookmark-toggle']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "save-featured-article-and-verify-in-saved",
+        "title": "Save a Featured article and verify Saved indicator and presence in My saved news",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Featured section",
+            "locatorHint": "[data-testid='featured-news-section']",
+            "screenName": "UKGCommons"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "save news",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:has-text('QA Fixture: Save Me') [data-testid='bookmark-toggle']",
+            "screenName": "UKGCommons"
+          },
+          {
+            "id": "s5",
+            "action": "assertVisible",
+            "targetDescription": "unsave news",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:has-text('QA Fixture: Save Me') [data-testid='saved-indicator']",
+            "screenName": "UKGCommons"
+          },
+          {
+            "id": "s6",
+            "action": "tap",
+            "targetDescription": "profile",
+            "locatorHint": "[data-testid='profile-menu-button']",
+            "screenName": "UKGCommons",
+            "value": "[data-tour=\"user-profile\"]"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']",
+            "screenName": "UKGCommons"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "my Saved News",
+            "locatorHint": "[data-testid='saved-news-page']",
+            "screenName": "SavedNews"
+          },
+          {
+            "id": "s9",
+            "action": "assertVisible",
+            "targetDescription": "unsave news",
+            "locatorHint": "[data-testid='saved-news-page']",
+            "screenName": "SavedNews"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "save-latest-article-and-verify-in-saved",
+        "title": "Save a Latest article and verify Saved indicator and presence in My saved news",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Latest section",
+            "locatorHint": "[data-testid='latest-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to Latest section",
+            "locatorHint": "[data-testid='latest-news-section']"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "Tap bookmark on 'QA Fixture: Latest Fixture' Latest card",
+            "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']:has-text('QA Fixture: Latest Fixture') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s5",
+            "action": "assertVisible",
+            "targetDescription": "Saved indicator appears on the Latest card",
+            "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']:has-text('QA Fixture: Latest Fixture') [data-testid='saved-indicator']"
+          },
+          {
+            "id": "s6",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Navigate to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page loaded",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s9",
+            "action": "assertContainsText",
+            "targetDescription": "Saved list contains the saved Latest article",
+            "locatorHint": "[data-testid='saved-news-page']",
+            "assertion": "QA Fixture: Latest Fixture"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "navigate-to-my-saved-news-from-profile",
+        "title": "Open My saved news via profile menu",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Header/profile ready",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "Select 'My saved news' menu item",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s5",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s6",
+            "action": "assertContainsText",
+            "targetDescription": "Saved News page header",
+            "locatorHint": "[data-testid='saved-news-page'] [data-testid='page-title']",
+            "assertion": "My saved news"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "open-saved-item-to-full-article",
+        "title": "Open a saved article from My saved news",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Featured section",
+            "locatorHint": "[data-testid='featured-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Ensure 'QA Fixture: Save Me' is saved (tap bookmark on its Featured card)",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:has-text('QA Fixture: Save Me') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s5",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s6",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Open saved item 'QA Fixture: Save Me'",
+            "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Save Me')"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Article details page",
+            "locatorHint": "[data-testid='article-title']"
+          },
+          {
+            "id": "s9",
+            "action": "assertContainsText",
+            "targetDescription": "Article title matches saved item",
+            "locatorHint": "[data-testid='article-title']",
+            "assertion": "QA Fixture: Save Me"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "unsave-from-saved-list-removes-immediately",
+        "title": "Unsave an item from My saved news removes it immediately",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Featured section ready",
+            "locatorHint": "[data-testid='featured-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Save 'QA Fixture: Save Me' if needed",
+            "locatorHint": "[data-testid='featured-news-section'] [data-testid='featured-card']:has-text('QA Fixture: Save Me') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s5",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s6",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Tap filled bookmark to unsave 'QA Fixture: Save Me'",
+            "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Save Me') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForHidden",
+            "targetDescription": "'QA Fixture: Save Me' disappears from Saved list",
+            "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Save Me')"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "saved-persists-after-refresh",
+        "title": "Saved state persists after page refresh and appears in My saved news",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Featured section loaded",
+            "locatorHint": "[data-testid='featured-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Save 'QA Fixture: Persist Me' on its card",
+            "locatorHint": "[data-testid='featured-card']:has-text('QA Fixture: Persist Me') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s4",
+            "action": "openUrl",
+            "targetDescription": "Refresh by reopening homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s5",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed container",
+            "locatorHint": "[data-testid='news-home']"
+          },
+          {
+            "id": "s6",
+            "action": "assertVisible",
+            "targetDescription": "Saved indicator persists on 'QA Fixture: Persist Me' card",
+            "locatorHint": "[data-testid='news-home'] [data-testid='news-card']:has-text('QA Fixture: Persist Me') [data-testid='saved-indicator']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s8",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s9",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s10",
+            "action": "assertContainsText",
+            "targetDescription": "'QA Fixture: Persist Me' appears in Saved list",
+            "locatorHint": "[data-testid='saved-news-page']",
+            "assertion": "QA Fixture: Persist Me"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "saved-persists-across-new-tab",
+        "title": "Saved items persist across a new tab (session sync)",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Latest section loaded",
+            "locatorHint": "[data-testid='latest-news-section']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Save 'QA Fixture: Cross-Device' on its Latest card",
+            "locatorHint": "[data-testid='latest-news-section'] [data-testid='latest-card']:has-text('QA Fixture: Cross-Device') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s4",
+            "action": "switchToNewTab",
+            "targetDescription": "Open a new browser tab"
+          },
+          {
+            "id": "s5",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage in new tab",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s6",
+            "action": "waitForVisible",
+            "targetDescription": "Header/profile available",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s8",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s9",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s10",
+            "action": "assertContainsText",
+            "targetDescription": "'QA Fixture: Cross-Device' is present in Saved list in new tab",
+            "locatorHint": "[data-testid='saved-news-page']",
+            "assertion": "QA Fixture: Cross-Device"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "archived-article-removed-from-saved",
+        "title": "Saved article disappears from My saved news after it is archived",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Latest or Featured sections ready",
+            "locatorHint": "[data-testid='news-home']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Save 'QA Fixture: Archive Me' via its card bookmark",
+            "locatorHint": "[data-testid='news-home'] [data-testid='news-card']:has-text('QA Fixture: Archive Me') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s4",
+            "action": "openUrl",
+            "targetDescription": "Trigger archive for QA fixture via QA utility URL",
+            "value": "https://commons-qa.util.ukg.com/qa-utils/archive?slug=qa-fixture-archive-me"
+          },
+          {
+            "id": "s5",
+            "action": "wait",
+            "targetDescription": "Wait for archive to process"
+          },
+          {
+            "id": "s6",
+            "action": "openUrl",
+            "targetDescription": "Return to homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s7",
+            "action": "waitForVisible",
+            "targetDescription": "Header/profile available",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s8",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "[data-testid='profile-menu-button']"
+          },
+          {
+            "id": "s9",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news']"
+          },
+          {
+            "id": "s10",
+            "action": "waitForVisible",
+            "targetDescription": "Saved News page",
+            "locatorHint": "[data-testid='saved-news-page']"
+          },
+          {
+            "id": "s11",
+            "action": "assertHidden",
+            "targetDescription": "'QA Fixture: Archive Me' no longer appears in Saved list",
+            "locatorHint": "[data-testid='saved-news-page'] [data-testid='saved-news-item']:has-text('QA Fixture: Archive Me')"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      }
+    ]
+  }
+}

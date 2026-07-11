@@ -1,0 +1,45 @@
+{
+  "id": "login-and-sections-visible",
+  "testPlanId": "da90f152-d858-4333-97c6-f5b36e865748",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional Happy Paths",
+  "case": {
+    "id": "login-and-sections-visible",
+    "title": "Login and verify Featured and Latest sections render",
+    "priority": "P1",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage (SSO via auth file)",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Home feed container",
+        "locatorHint": "[data-testid='news-home']"
+      },
+      {
+        "id": "s3",
+        "action": "assertVisible",
+        "targetDescription": "Featured News section",
+        "locatorHint": "[data-testid='featured-news-section']"
+      },
+      {
+        "id": "s4",
+        "action": "assertVisible",
+        "targetDescription": "Latest News section",
+        "locatorHint": "[data-testid='latest-news-section']"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}
