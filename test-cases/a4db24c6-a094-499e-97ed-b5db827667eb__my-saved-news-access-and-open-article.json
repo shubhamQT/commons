@@ -1,0 +1,138 @@
+{
+  "id": "my-saved-news-access-and-open-article",
+  "testPlanId": "a4db24c6-a094-499e-97ed-b5db827667eb",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional",
+  "case": {
+    "id": "my-saved-news-access-and-open-article",
+    "title": "Access 'My saved news' from profile and open a saved article",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "SSO Sign In button",
+        "locatorHint": "[data-testid='sso-signin-button']",
+        "value": "15000"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Click Sign in with SSO",
+        "locatorHint": "[data-testid='sso-signin-button']"
+      },
+      {
+        "id": "s4",
+        "action": "waitForVisible",
+        "targetDescription": "SSO Username input",
+        "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+        "value": "15000"
+      },
+      {
+        "id": "s5",
+        "action": "fill",
+        "targetDescription": "Enter SSO Username",
+        "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+        "value": "<SSO_USERNAME>"
+      },
+      {
+        "id": "s6",
+        "action": "fill",
+        "targetDescription": "Enter SSO Password",
+        "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+        "value": "<SSO_PASSWORD>"
+      },
+      {
+        "id": "s7",
+        "action": "tap",
+        "targetDescription": "Submit SSO Sign In",
+        "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+      },
+      {
+        "id": "s8",
+        "action": "waitForVisible",
+        "targetDescription": "Home feed is visible",
+        "locatorHint": "[data-testid='home-feed']",
+        "value": "20000"
+      },
+      {
+        "id": "s9",
+        "action": "scrollIntoView",
+        "targetDescription": "Target article card with title",
+        "locatorHint": "text='Take the next step in your development at UKG'"
+      },
+      {
+        "id": "s10",
+        "action": "tap",
+        "targetDescription": "Save the target article via bookmark icon",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s11",
+        "action": "waitForVisible",
+        "targetDescription": "Saved badge appears on the card",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+        "value": "5000"
+      },
+      {
+        "id": "s12",
+        "action": "tap",
+        "targetDescription": "Open profile/avatar menu",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s13",
+        "action": "tap",
+        "targetDescription": "Go to My saved news",
+        "locatorHint": "[data-testid='menu-saved-news'], text='My saved news'"
+      },
+      {
+        "id": "s14",
+        "action": "waitForVisible",
+        "targetDescription": "Saved news list is visible",
+        "locatorHint": "[data-testid='saved-news-list']",
+        "value": "10000"
+      },
+      {
+        "id": "s15",
+        "action": "assertVisible",
+        "targetDescription": "Saved article appears in list",
+        "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "s16",
+        "action": "tap",
+        "targetDescription": "Open the saved article from list",
+        "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG') a, [data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "s17",
+        "action": "waitForVisible",
+        "targetDescription": "Article detail page title",
+        "locatorHint": "[data-testid='article-title']",
+        "value": "10000"
+      },
+      {
+        "id": "s18",
+        "action": "assertText",
+        "targetDescription": "Article detail title matches",
+        "locatorHint": "[data-testid='article-title']",
+        "assertion": "Take the next step in your development at UKG"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

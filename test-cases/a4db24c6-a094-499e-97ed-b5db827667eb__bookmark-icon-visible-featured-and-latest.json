@@ -1,0 +1,130 @@
+{
+  "id": "bookmark-icon-visible-featured-and-latest",
+  "testPlanId": "a4db24c6-a094-499e-97ed-b5db827667eb",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — Functional",
+  "case": {
+    "id": "bookmark-icon-visible-featured-and-latest",
+    "title": "Bookmark icon visible on Featured and Latest News cards",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Commons QA",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "SSO Sign In button",
+        "locatorHint": "[data-testid='sso-signin-button']",
+        "value": "15000"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Click Sign in with SSO",
+        "locatorHint": "[data-testid='sso-signin-button']"
+      },
+      {
+        "id": "s4",
+        "action": "waitForVisible",
+        "targetDescription": "SSO Username input",
+        "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+        "value": "15000"
+      },
+      {
+        "id": "s5",
+        "action": "fill",
+        "targetDescription": "Enter SSO Username",
+        "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+        "value": "<SSO_USERNAME>"
+      },
+      {
+        "id": "s6",
+        "action": "fill",
+        "targetDescription": "Enter SSO Password",
+        "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+        "value": "<SSO_PASSWORD>"
+      },
+      {
+        "id": "s7",
+        "action": "tap",
+        "targetDescription": "Submit SSO Sign In",
+        "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+      },
+      {
+        "id": "s8",
+        "action": "waitForVisible",
+        "targetDescription": "Home feed is visible",
+        "locatorHint": "[data-testid='home-feed']",
+        "value": "20000"
+      },
+      {
+        "id": "s9",
+        "action": "assertVisible",
+        "targetDescription": "Profile avatar indicates login success",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s10",
+        "action": "waitForVisible",
+        "targetDescription": "Featured News section",
+        "locatorHint": "[data-testid='featured-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s11",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Featured news cards exist",
+        "locatorHint": "[data-testid='featured-news-card']"
+      },
+      {
+        "id": "s12",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Featured news cards have bookmark icons",
+        "locatorHint": "[data-testid='featured-news-card'] [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s13",
+        "action": "waitForVisible",
+        "targetDescription": "Latest News section",
+        "locatorHint": "[data-testid='latest-news-section']",
+        "value": "10000"
+      },
+      {
+        "id": "s14",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Latest news cards exist",
+        "locatorHint": "[data-testid='latest-news-card']"
+      },
+      {
+        "id": "s15",
+        "action": "assertCountGreaterThan",
+        "targetDescription": "Latest news cards have bookmark icons",
+        "locatorHint": "[data-testid='latest-news-card'] [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s16",
+        "action": "scrollIntoView",
+        "targetDescription": "Target article card with title",
+        "locatorHint": "text='Take the next step in your development at UKG'"
+      },
+      {
+        "id": "s17",
+        "action": "assertVisible",
+        "targetDescription": "Bookmark icon visible on target article card",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+      }
+    ],
+    "tags": [
+      "@functional",
+      "@regression"
+    ]
+  }
+}

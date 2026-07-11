@@ -1,1 +1,29 @@
-{}
+{
+  "bookmarkIconVisibleOnFeaturedAndLatestNewsCards": {
+    "enterSsoUsername": "<SSO_USERNAME>",
+    "enterSsoPassword": "<SSO_PASSWORD>"
+  },
+  "saveArticleFromNewsCardShowsSavedIndicatorAndFilledIcon": {
+    "enterSsoUsername": "<SSO_USERNAME>",
+    "enterSsoPassword": "<SSO_PASSWORD>"
+  },
+  "savedArticlePersistsAfterPageReloadAndReLogin": {
+    "enterSsoUsername": "<SSO_USERNAME>",
+    "enterSsoPassword": "<SSO_PASSWORD>",
+    "reEnterSsoUsername": "<SSO_USERNAME>",
+    "reEnterSsoPassword": "<SSO_PASSWORD>"
+  },
+  "accessMySavedNewsFromProfileAndOpenASavedArticle": {
+    "enterSsoUsername": "<SSO_USERNAME>",
+    "enterSsoPassword": "<SSO_PASSWORD>"
+  },
+  "unsavingAnItemFromSavedNewsRemovesItImmediately": {
+    "enterSsoUsername": "<SSO_USERNAME>",
+    "enterSsoPassword": "<SSO_PASSWORD>"
+  },
+  "archivedDeletedArticleIsAutomaticallyRemovedFromSavedNews": {
+    "enterSsoUsername": "<SSO_USERNAME>",
+    "enterSsoPassword": "<SSO_PASSWORD>",
+    "enterArticleTitleToArchive": "Take the next step in your development at UKG"
+  }
+}

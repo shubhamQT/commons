@@ -1,0 +1,833 @@
+{
+  "id": "a4db24c6-a094-499e-97ed-b5db827667eb",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "model": "gpt-5",
+  "createdAt": "2026-07-11T15:20:03.627Z",
+  "plan": {
+    "version": 1,
+    "suiteName": "Save News Article Card — Functional",
+    "cases": [
+      {
+        "id": "bookmark-icon-visible-featured-and-latest",
+        "title": "Bookmark icon visible on Featured and Latest News cards",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Navigate to Commons QA",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Sign In button",
+            "locatorHint": "[data-testid='sso-signin-button']",
+            "value": "15000"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Click Sign in with SSO",
+            "locatorHint": "[data-testid='sso-signin-button']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "15000"
+          },
+          {
+            "id": "s5",
+            "action": "fill",
+            "targetDescription": "Enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s6",
+            "action": "fill",
+            "targetDescription": "Enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s9",
+            "action": "assertVisible",
+            "targetDescription": "Profile avatar indicates login success",
+            "locatorHint": "[data-testid='profile-avatar']"
+          },
+          {
+            "id": "s10",
+            "action": "waitForVisible",
+            "targetDescription": "Featured News section",
+            "locatorHint": "[data-testid='featured-news-section']",
+            "value": "10000"
+          },
+          {
+            "id": "s11",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Featured news cards exist",
+            "locatorHint": "[data-testid='featured-news-card']"
+          },
+          {
+            "id": "s12",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Featured news cards have bookmark icons",
+            "locatorHint": "[data-testid='featured-news-card'] [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s13",
+            "action": "waitForVisible",
+            "targetDescription": "Latest News section",
+            "locatorHint": "[data-testid='latest-news-section']",
+            "value": "10000"
+          },
+          {
+            "id": "s14",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Latest news cards exist",
+            "locatorHint": "[data-testid='latest-news-card']"
+          },
+          {
+            "id": "s15",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Latest news cards have bookmark icons",
+            "locatorHint": "[data-testid='latest-news-card'] [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s16",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card with title",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s17",
+            "action": "assertVisible",
+            "targetDescription": "Bookmark icon visible on target article card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "save-article-from-card-shows-saved-state",
+        "title": "Save article from news card shows 'Saved' indicator and filled icon",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Navigate to Commons QA",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Sign In button",
+            "locatorHint": "[data-testid='sso-signin-button']",
+            "value": "15000"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Click Sign in with SSO",
+            "locatorHint": "[data-testid='sso-signin-button']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "15000"
+          },
+          {
+            "id": "s5",
+            "action": "fill",
+            "targetDescription": "Enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s6",
+            "action": "fill",
+            "targetDescription": "Enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s9",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card with title",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s10",
+            "action": "tap",
+            "targetDescription": "Tap bookmark icon on target article card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s11",
+            "action": "waitForVisible",
+            "targetDescription": "Saved badge appears on the card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+            "value": "5000"
+          },
+          {
+            "id": "s12",
+            "action": "assertContainsText",
+            "targetDescription": "Saved badge text",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+            "assertion": "Saved"
+          },
+          {
+            "id": "s13",
+            "action": "assertVisible",
+            "targetDescription": "Bookmark icon is filled/active",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle'][aria-pressed='true']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "saved-articles-persist-after-reload-and-relogin",
+        "title": "Saved article persists after page reload and re-login",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Navigate to Commons QA",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Sign In button",
+            "locatorHint": "[data-testid='sso-signin-button']",
+            "value": "15000"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Click Sign in with SSO",
+            "locatorHint": "[data-testid='sso-signin-button']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "15000"
+          },
+          {
+            "id": "s5",
+            "action": "fill",
+            "targetDescription": "Enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s6",
+            "action": "fill",
+            "targetDescription": "Enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s9",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card with title",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s10",
+            "action": "tap",
+            "targetDescription": "Tap bookmark icon on target article card to save",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s11",
+            "action": "waitForVisible",
+            "targetDescription": "Saved badge appears on the card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+            "value": "5000"
+          },
+          {
+            "id": "s12",
+            "action": "openUrl",
+            "targetDescription": "Reload by navigating to home URL again",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s13",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible after reload",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "10000"
+          },
+          {
+            "id": "s14",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card after reload",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s15",
+            "action": "assertVisible",
+            "targetDescription": "Saved badge persists on the card after reload",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']"
+          },
+          {
+            "id": "s16",
+            "action": "tap",
+            "targetDescription": "Open profile/avatar menu",
+            "locatorHint": "[data-testid='profile-avatar']"
+          },
+          {
+            "id": "s17",
+            "action": "tap",
+            "targetDescription": "Click Sign out",
+            "locatorHint": "[data-testid='menu-signout'], text='Sign out'"
+          },
+          {
+            "id": "s18",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input (back to login)",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "20000"
+          },
+          {
+            "id": "s19",
+            "action": "fill",
+            "targetDescription": "Re-enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s20",
+            "action": "fill",
+            "targetDescription": "Re-enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s21",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In again",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s22",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed visible after re-login",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s23",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card after re-login",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s24",
+            "action": "assertVisible",
+            "targetDescription": "Saved badge persists after re-login",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "my-saved-news-access-and-open-article",
+        "title": "Access 'My saved news' from profile and open a saved article",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Navigate to Commons QA",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Sign In button",
+            "locatorHint": "[data-testid='sso-signin-button']",
+            "value": "15000"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Click Sign in with SSO",
+            "locatorHint": "[data-testid='sso-signin-button']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "15000"
+          },
+          {
+            "id": "s5",
+            "action": "fill",
+            "targetDescription": "Enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s6",
+            "action": "fill",
+            "targetDescription": "Enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s9",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card with title",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s10",
+            "action": "tap",
+            "targetDescription": "Save the target article via bookmark icon",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s11",
+            "action": "waitForVisible",
+            "targetDescription": "Saved badge appears on the card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+            "value": "5000"
+          },
+          {
+            "id": "s12",
+            "action": "tap",
+            "targetDescription": "Open profile/avatar menu",
+            "locatorHint": "[data-testid='profile-avatar']"
+          },
+          {
+            "id": "s13",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news'], text='My saved news'"
+          },
+          {
+            "id": "s14",
+            "action": "waitForVisible",
+            "targetDescription": "Saved news list is visible",
+            "locatorHint": "[data-testid='saved-news-list']",
+            "value": "10000"
+          },
+          {
+            "id": "s15",
+            "action": "assertVisible",
+            "targetDescription": "Saved article appears in list",
+            "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+          },
+          {
+            "id": "s16",
+            "action": "tap",
+            "targetDescription": "Open the saved article from list",
+            "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG') a, [data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+          },
+          {
+            "id": "s17",
+            "action": "waitForVisible",
+            "targetDescription": "Article detail page title",
+            "locatorHint": "[data-testid='article-title']",
+            "value": "10000"
+          },
+          {
+            "id": "s18",
+            "action": "assertText",
+            "targetDescription": "Article detail title matches",
+            "locatorHint": "[data-testid='article-title']",
+            "assertion": "Take the next step in your development at UKG"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "unsave-from-saved-news-removes-immediately",
+        "title": "Unsaving an item from Saved News removes it immediately",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Navigate to Commons QA",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Sign In button",
+            "locatorHint": "[data-testid='sso-signin-button']",
+            "value": "15000"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Click Sign in with SSO",
+            "locatorHint": "[data-testid='sso-signin-button']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "15000"
+          },
+          {
+            "id": "s5",
+            "action": "fill",
+            "targetDescription": "Enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s6",
+            "action": "fill",
+            "targetDescription": "Enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s9",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card with title",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s10",
+            "action": "tap",
+            "targetDescription": "Ensure article is saved: tap bookmark on target card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s11",
+            "action": "waitForVisible",
+            "targetDescription": "Saved badge appears on the card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+            "value": "5000"
+          },
+          {
+            "id": "s12",
+            "action": "tap",
+            "targetDescription": "Open profile/avatar menu",
+            "locatorHint": "[data-testid='profile-avatar']"
+          },
+          {
+            "id": "s13",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news'], text='My saved news'"
+          },
+          {
+            "id": "s14",
+            "action": "waitForVisible",
+            "targetDescription": "Saved news list",
+            "locatorHint": "[data-testid='saved-news-list']",
+            "value": "10000"
+          },
+          {
+            "id": "s15",
+            "action": "assertVisible",
+            "targetDescription": "Saved article present before unsave",
+            "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+          },
+          {
+            "id": "s16",
+            "action": "tap",
+            "targetDescription": "Unsave the item from Saved News list",
+            "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s17",
+            "action": "waitForHidden",
+            "targetDescription": "Saved article disappears immediately from list",
+            "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')",
+            "value": "5000"
+          },
+          {
+            "id": "s18",
+            "action": "tap",
+            "targetDescription": "Navigate back to Home (via logo or home link)",
+            "locatorHint": "[data-testid='nav-home'], [data-testid='header-logo']"
+          },
+          {
+            "id": "s19",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible after returning",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "10000"
+          },
+          {
+            "id": "s20",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card on Home",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s21",
+            "action": "assertHidden",
+            "targetDescription": "Saved badge no longer present on target card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      },
+      {
+        "id": "archived-article-removed-from-saved-list",
+        "title": "Archived/deleted article is automatically removed from Saved News",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Navigate to Commons QA",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Sign In button",
+            "locatorHint": "[data-testid='sso-signin-button']",
+            "value": "15000"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Click Sign in with SSO",
+            "locatorHint": "[data-testid='sso-signin-button']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "SSO Username input",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "15000"
+          },
+          {
+            "id": "s5",
+            "action": "fill",
+            "targetDescription": "Enter SSO Username",
+            "locatorHint": "input[name='username'], #i0116, [data-testid='sso-username-input']",
+            "value": "<SSO_USERNAME>"
+          },
+          {
+            "id": "s6",
+            "action": "fill",
+            "targetDescription": "Enter SSO Password",
+            "locatorHint": "input[name='password'], #i0118, [data-testid='sso-password-input']",
+            "value": "<SSO_PASSWORD>"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Submit SSO Sign In",
+            "locatorHint": "button[type='submit'], #idSIButton9, [data-testid='sso-submit-button']"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "Home feed is visible",
+            "locatorHint": "[data-testid='home-feed']",
+            "value": "20000"
+          },
+          {
+            "id": "s9",
+            "action": "scrollIntoView",
+            "targetDescription": "Target article card with title",
+            "locatorHint": "text='Take the next step in your development at UKG'"
+          },
+          {
+            "id": "s10",
+            "action": "tap",
+            "targetDescription": "Save the target article via bookmark icon",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s11",
+            "action": "waitForVisible",
+            "targetDescription": "Saved badge appears on the card",
+            "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='saved-badge']",
+            "value": "5000"
+          },
+          {
+            "id": "s12",
+            "action": "openUrl",
+            "targetDescription": "Open QA Tools to archive article",
+            "value": "https://commons-qa.util.ukg.com/qa-tools"
+          },
+          {
+            "id": "s13",
+            "action": "waitForVisible",
+            "targetDescription": "QA Tools - Archive Article form",
+            "locatorHint": "[data-testid='qa-tools-archive-form']",
+            "value": "10000"
+          },
+          {
+            "id": "s14",
+            "action": "fill",
+            "targetDescription": "Enter article title to archive",
+            "locatorHint": "[data-testid='qa-tools-archive-title-input']",
+            "value": "Take the next step in your development at UKG"
+          },
+          {
+            "id": "s15",
+            "action": "tap",
+            "targetDescription": "Submit archive request",
+            "locatorHint": "[data-testid='qa-tools-archive-submit']"
+          },
+          {
+            "id": "s16",
+            "action": "waitForVisible",
+            "targetDescription": "Archive success message",
+            "locatorHint": "[data-testid='qa-tools-archive-success']",
+            "value": "10000"
+          },
+          {
+            "id": "s17",
+            "action": "tap",
+            "targetDescription": "Open profile/avatar menu",
+            "locatorHint": "[data-testid='profile-avatar']"
+          },
+          {
+            "id": "s18",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[data-testid='menu-saved-news'], text='My saved news'"
+          },
+          {
+            "id": "s19",
+            "action": "waitForVisible",
+            "targetDescription": "Saved news list is visible",
+            "locatorHint": "[data-testid='saved-news-list']",
+            "value": "10000"
+          },
+          {
+            "id": "s20",
+            "action": "assertHidden",
+            "targetDescription": "Archived article no longer appears in Saved News",
+            "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+          }
+        ],
+        "tags": [
+          "@functional",
+          "@regression"
+        ]
+      }
+    ]
+  }
+}
