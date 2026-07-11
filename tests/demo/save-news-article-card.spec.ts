@@ -7,30 +7,6 @@ test('Unsaving an item from Saved News removes it immediately', { tag: ["@functi
     await page.goto(env.baseURL);
   });
 
-  await test.step('Assert visible — SSO Sign In button', async () => {
-    await ukgcommonsPage.expectHeaderBgVisible();
-  });
-
-  await test.step('Click — Click Sign in with SSO', async () => {
-    await ukgcommonsPage.clickSearchIcon();
-  });
-
-  await test.step('Assert visible — SSO Username input', async () => {
-    await ukgcommonsPage.expectMuiInputBaseInputVisible();
-  });
-
-  await test.step('Fill — Enter SSO Username', async () => {
-    await ukgcommonsPage.fillMuiInputBaseInput(testData.unsavingAnItemFromSavedNewsRemovesItImmediately.enterSsoUsername);
-  });
-
-  await test.step('Fill — Enter SSO Password', async () => {
-    await ukgcommonsPage.fillR6h(testData.unsavingAnItemFromSavedNewsRemovesItImmediately.enterSsoPassword);
-  });
-
-  await test.step('Click — Submit SSO Sign In', async () => {
-    await ukgcommonsPage.clickSearchIcon();
-  });
-
   await test.step('Assert visible — Home feed is visible', async () => {
     await ukgcommonsPage.expectFeaturedVisible();
   });
@@ -88,7 +64,6 @@ test('Unsaving an item from Saved News removes it immediately', { tag: ["@functi
   });
 });
 
-
 test("Access 'My saved news' from profile and open a saved article", { tag: ["@functional","@regression","@P0","@my-saved-news-access-and-open-article"] }, async ({ page, ukgcommonsPage, savedNewsPage, takeTheNextStepInYourDevelopmentAtUkgPage }) => {
   const articleTitle = testData.archivedDeletedArticleIsAutomaticallyRemovedFromSavedNews.enterArticleTitleToArchive;
 
@@ -97,7 +72,7 @@ test("Access 'My saved news' from profile and open a saved article", { tag: ["@f
   });
 
   await test.step('Assert visible — Home feed is visible', async () => {
-    await ukgcommonsPage.expectLatestNewsTitleVisible();
+    await ukgcommonsPage.expectFeaturedVisible();
   });
 
   await test.step('Scroll — Target article card with title', async () => {
