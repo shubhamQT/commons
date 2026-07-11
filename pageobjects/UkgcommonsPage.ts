@@ -42,7 +42,7 @@ import {
 
 export class UkgcommonsPage {
   private static readonly L = {
-    userProfile: { strategy: 'css' as const, value: '[class*="Header_profilePic"]', actionKind: 'generic' as const },
+    userProfile: { strategy: 'css' as const, value: '[data-tour="user-profile"]', actionKind: 'generic' as const },
     searchNewsSitesOr: { strategy: 'placeholder' as const, value: 'Search news, sites, or events ', actionKind: 'textbox' as const },
     searchIcon: { strategy: 'altText' as const, value: 'search_icon', actionKind: 'generic' as const },
     announcements: { strategy: 'css' as const, value: '[class*="Announcement_announcementSection"]', actionKind: 'generic' as const },
