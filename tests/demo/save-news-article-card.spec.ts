@@ -15,6 +15,18 @@ test("Save article from Featured, verify Saved state, find in 'My saved news', a
     await ukgcommonsPage.expectTakeTheNextStepInYourDevVisible();
   });
 
+  await test.step('Scroll — Ensure target article card is in view', async () => {
+    await ukgcommonsPage.scrollTakeTheNextStepInYourDevIntoView();
+  });
+
+  await test.step('Scroll — Ensure save icon is in view', async () => {
+    await ukgcommonsPage.scrollSaveIconIntoView();
+  });
+
+  await test.step('Assert visible — Save icon visible', async () => {
+    await ukgcommonsPage.expectSaveIconVisible();
+  });
+
   await test.step('Click — Tap bookmark icon on the target article card (Featured)', async () => {
     await ukgcommonsPage.clickSaveIcon();
   });
