@@ -1,0 +1,95 @@
+{
+  "id": "save-from-card-and-verify-in-saved-open-article",
+  "testPlanId": "183609fa-f97a-4aee-bfe4-79219c2de17e",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card - E2E",
+  "case": {
+    "id": "save-from-card-and-verify-in-saved-open-article",
+    "title": "Save an article from card, verify in My saved news, and open full article",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA homepage",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "scrollIntoView",
+        "targetDescription": "Scroll to target article card",
+        "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s3",
+        "action": "assertVisible",
+        "targetDescription": "Target article card is visible",
+        "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s4",
+        "action": "tap",
+        "targetDescription": "Tap bookmark icon to save",
+        "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+      },
+      {
+        "id": "s5",
+        "action": "assertContainsText",
+        "targetDescription": "Bookmark toggle indicates Saved",
+        "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+        "assertion": "Saved"
+      },
+      {
+        "id": "s6",
+        "action": "tap",
+        "targetDescription": "Open profile menu",
+        "locatorHint": "button[aria-label='Profile']"
+      },
+      {
+        "id": "s7",
+        "action": "tap",
+        "targetDescription": "Go to My saved news",
+        "locatorHint": "[role='menuitem'], a:has-text('My saved news')"
+      },
+      {
+        "id": "s8",
+        "action": "waitForVisible",
+        "targetDescription": "My saved news page header",
+        "locatorHint": "h1:has-text('My saved news')"
+      },
+      {
+        "id": "s9",
+        "action": "assertVisible",
+        "targetDescription": "Saved item appears in list",
+        "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+      },
+      {
+        "id": "s10",
+        "action": "tap",
+        "targetDescription": "Open saved item to full article",
+        "locatorHint": "[data-testid='saved-news-list'] li a:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "s11",
+        "action": "waitForVisible",
+        "targetDescription": "Article page title loads",
+        "locatorHint": "article h1"
+      },
+      {
+        "id": "s12",
+        "action": "assertContainsText",
+        "targetDescription": "Article page heading matches saved item",
+        "locatorHint": "article h1",
+        "assertion": "Take the next step in your development at UKG"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}

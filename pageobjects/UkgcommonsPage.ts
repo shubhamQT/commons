@@ -51,6 +51,7 @@ export class UkgcommonsPage {
     userProfile: { strategy: 'css' as const, value: '[class*="Header_profilePic"]', actionKind: 'generic' as const },
     headerBg: { strategy: 'altText' as const, value: 'header-bg', actionKind: 'generic' as const },
     hiJagadeeshWhatAre: { strategy: 'role' as const, value: 'Hi Jagadeesh, what are you looking for?', role: 'heading', level: 2, actionKind: 'text' as const },
+    jagadeesh: { strategy: 'text' as const, value: 'Jagadeesh', actionKind: 'text' as const },
     sharePoint: { strategy: 'role' as const, value: 'SharePoint', role: 'button', actionKind: 'button' as const },
     searchNewsSitesOr: { strategy: 'placeholder' as const, value: 'Search news, sites, or events ', actionKind: 'textbox' as const },
     searchIcon: { strategy: 'altText' as const, value: 'search_icon', actionKind: 'generic' as const },
@@ -91,61 +92,79 @@ export class UkgcommonsPage {
     socialCircleTitle: { strategy: 'role' as const, value: 'UKG and industry news', role: 'button', actionKind: 'button' as const },
     catchUpOnThe: { strategy: 'role' as const, value: 'Catch up on the latest happenings across teams, divisions, and UKG locations.', role: 'img', actionKind: 'generic' as const },
     seeAllInternalNews: { strategy: 'role' as const, value: 'See all internal news', role: 'button', actionKind: 'button' as const },
-    buildNewsletterJuly: { strategy: 'altText' as const, value: 'Build Newsletter - July 2026', actionKind: 'generic' as const },
-    peopleUkgBuild: { strategy: 'role' as const, value: 'People: UKG Build', role: 'link', actionKind: 'link' as const },
+    webinarFeaturingUkgCustomer: { strategy: 'altText' as const, value: 'Webinar featuring UKG customer Bay Federal Credit Union', actionKind: 'generic' as const },
+    gtmMarketing: { strategy: 'role' as const, value: 'GTM: Marketing', role: 'link', actionKind: 'link' as const },
+    webinarFeaturingUkgCustomerLink: { strategy: 'role' as const, value: 'Webinar featuring UKG customer Bay Federal Credit', role: 'link', actionKind: 'link' as const },
     comment: { strategy: 'altText' as const, value: 'comment', actionKind: 'generic' as const },
-    policyGovernanceAtUkgBuil: { strategy: 'altText' as const, value: 'Policy governance at UKG: Building trust through strong governance', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Policy governance at UKG: Building trust through strong governance', scopeIndex: 0, actionKind: 'generic' as const },
-    policyGovernanceAtUkgBuilLegalRiskCompliance: { strategy: 'role' as const, value: 'Legal: Risk & Compliance', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Policy governance at UKG: Building trust through strong governance', scopeIndex: 0, actionKind: 'link' as const },
-    policyGovernanceAtUkgLink: { strategy: 'css' as const, value: '[class*="LatestNewsWidget_newsTitle"]', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Policy governance at UKG: Building trust through strong governance', scopeIndex: 0, actionKind: 'link' as const },
-    photoOfTheWeekLowellOffiInsideUkg: { strategy: 'role' as const, value: 'Inside UKG', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Photo of the Week: Lowell office spotlight', scopeIndex: 1, actionKind: 'link' as const },
-    photoOfTheWeekLink: { strategy: 'role' as const, value: 'Photo of the Week: Lowell office spotlight', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Photo of the Week: Lowell office spotlight', scopeIndex: 1, actionKind: 'link' as const },
-    agencyUAgentAThonMovesIntAiHub: { strategy: 'role' as const, value: 'AI Hub', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'AgencyU Agent-a-thon moves into judging', scopeIndex: 2, actionKind: 'link' as const },
-    agencyUAgentAThonMovesIntoLink: { strategy: 'role' as const, value: 'AgencyU Agent-a-thon moves into judging', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'AgencyU Agent-a-thon moves into judging', scopeIndex: 2, actionKind: 'link' as const },
-    newForresterTotalEconomicI: { strategy: 'altText' as const, value: 'New Forrester Total Economic Impact™ (TEI) study is live!', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'New Forrester Total Economic Impact™ (TEI) study is live!', scopeIndex: 3, actionKind: 'generic' as const },
-    newForresterTotalEconomicIGtmMarketing: { strategy: 'role' as const, value: 'GTM: Marketing', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'New Forrester Total Economic Impact™ (TEI) study is live!', scopeIndex: 3, actionKind: 'link' as const },
-    newForresterTotalEconomicLink: { strategy: 'role' as const, value: 'New Forrester Total Economic Impact™ (TEI) study', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'New Forrester Total Economic Impact™ (TEI) study is live!', scopeIndex: 3, actionKind: 'link' as const },
-    july2026HealthAwarenessSp: { strategy: 'altText' as const, value: 'July 2026 health awareness: Spotlight on wellness initiatives', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'July 2026 health awareness: Spotlight on wellness initiatives', scopeIndex: 4, actionKind: 'generic' as const },
-    july2026HealthAwarenessSpPeopleUkgCares: { strategy: 'role' as const, value: 'People: UKG Cares', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'July 2026 health awareness: Spotlight on wellness initiatives', scopeIndex: 4, actionKind: 'link' as const },
-    employeeResourceGroupErg: { strategy: 'altText' as const, value: 'Employee Resource Group (ERG) monthly newsletter: July 2026', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Employee Resource Group (ERG) monthly newsletter: July 2026', scopeIndex: 5, actionKind: 'generic' as const },
-    employeeResourceGroupErgPeopleBelongingImpact: { strategy: 'role' as const, value: 'People: Belonging & Impact', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Employee Resource Group (ERG) monthly newsletter: July 2026', scopeIndex: 5, actionKind: 'link' as const },
-    ukgRiseEarlyCareerMonthB: { strategy: 'altText' as const, value: 'UKG Rise Early Career Month: Build the skills, shape the future', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG Rise Early Career Month: Build the skills, shape the future', scopeIndex: 6, actionKind: 'generic' as const },
-    globalSecurityManagedVault: { strategy: 'altText' as const, value: 'Global Security managed Vault certificate migration calendar', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Global Security managed Vault certificate migration calendar', scopeIndex: 7, actionKind: 'generic' as const },
-    globalSecurityManagedVaultProductEngineeringGlobal: { strategy: 'role' as const, value: 'Product & Engineering: Global Security', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Global Security managed Vault certificate migration calendar', scopeIndex: 7, actionKind: 'link' as const },
-    globalSecurityManagedVaultLink: { strategy: 'role' as const, value: 'Global Security managed Vault certificate', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Global Security managed Vault certificate migration calendar', scopeIndex: 7, actionKind: 'link' as const },
-    baselineImagesRequiredForN: { strategy: 'altText' as const, value: 'Baseline Images required for new deployments starting July 31', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Baseline Images required for new deployments starting July 31', scopeIndex: 8, actionKind: 'generic' as const },
-    ukgNucleusRoiLink: { strategy: 'role' as const, value: 'UKG | Nucleus ROI Case Study-UKG Pro at XKIG', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG | Nucleus ROI Case Study-UKG Pro at XKIG', scopeIndex: 9, actionKind: 'link' as const },
-    ukgCommonsMobileAppNowAvaCommsEmployeeCommunications: { strategy: 'role' as const, value: 'Comms: Employee Communications', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG Commons mobile app now available', scopeIndex: 10, actionKind: 'link' as const },
-    ukgCommonsMobileAppLink: { strategy: 'role' as const, value: 'UKG Commons mobile app now available', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG Commons mobile app now available', scopeIndex: 10, actionKind: 'link' as const },
-    whatSecuritySeesSometimes: { strategy: 'altText' as const, value: 'What Security Sees: Sometimes thinking like a cybercriminal starts with “update now”', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'What Security Sees: Sometimes thinking like a cybercriminal starts with “update now”', scopeIndex: 11, actionKind: 'generic' as const },
-    disabilityINJuly2026: { strategy: 'altText' as const, value: 'DisabilityIN July 2026', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'DisabilityIN July 2026', scopeIndex: 12, actionKind: 'generic' as const },
-    disabilityINJuly2026PeopleUkgAdapt: { strategy: 'role' as const, value: 'People: UKG Adapt', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'DisabilityIN July 2026', scopeIndex: 12, actionKind: 'link' as const },
-    photoOfTheWeekPhotoOfTheWeekTakeYourC: { strategy: 'role' as const, value: 'Photo of the Week: Take Your Child to Work Day', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Photo of the Week: Take Your Child to Work Day', scopeIndex: 13, actionKind: 'link' as const },
-    doNotEngageWithUnsolicited: { strategy: 'altText' as const, value: 'Do not engage with unsolicited Teams calls or suspicious emails', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Do not engage with unsolicited Teams calls or suspicious emails', scopeIndex: 14, actionKind: 'generic' as const },
-    thankYouForParticipatingIn: { strategy: 'altText' as const, value: 'Thank you for participating in the GPTW Trust Index Survey', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Thank you for participating in the GPTW Trust Index Survey', scopeIndex: 15, actionKind: 'generic' as const },
-    thankYouForParticipatingInPeopleEmployeeExperience: { strategy: 'role' as const, value: 'People: Employee Experience', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Thank you for participating in the GPTW Trust Index Survey', scopeIndex: 15, actionKind: 'link' as const },
-    thankYouForParticipatingLink: { strategy: 'role' as const, value: 'Thank you for participating in the GPTW Trust', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Thank you for participating in the GPTW Trust Index Survey', scopeIndex: 15, actionKind: 'link' as const },
-    bigWinForUkgCommsAnalystRelations: { strategy: 'role' as const, value: 'Comms: Analyst Relations', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: '🎉 Big Win for UKG!', scopeIndex: 16, actionKind: 'link' as const },
-    bigWinForLink: { strategy: 'role' as const, value: '🎉 Big Win for UKG!', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: '🎉 Big Win for UKG!', scopeIndex: 16, actionKind: 'link' as const },
-    tuneInTodayUkgAdLink: { strategy: 'role' as const, value: 'Tune-In Today: UKG Ad Spot During the World Cup', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Tune-In Today: UKG Ad Spot During the World Cup', scopeIndex: 17, actionKind: 'link' as const },
-    claudeEnterpriseAccessForN: { strategy: 'altText' as const, value: 'Claude Enterprise access for non-Product and Engineering teams', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Claude Enterprise access for non-Product and Engineering teams', scopeIndex: 18, actionKind: 'generic' as const },
+    q3FY26SalesRecognitionGtm: { strategy: 'role' as const, value: 'GTM', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Q3 FY26 Sales Recognition 🎉', scopeIndex: 0, actionKind: 'link' as const },
+    q3FY26SalesRecognitionLink: { strategy: 'role' as const, value: 'Q3 FY26 Sales Recognition 🎉', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Q3 FY26 Sales Recognition 🎉', scopeIndex: 0, actionKind: 'link' as const },
+    theRoleOfHrLink: { strategy: 'role' as const, value: 'The Role of HR in a Shrinking Higher Ed', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'The Role of HR in a Shrinking Higher Ed', scopeIndex: 1, actionKind: 'link' as const },
+    julySocialSellingUpdatesLink: { strategy: 'role' as const, value: 'July social selling updates', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'July social selling updates', scopeIndex: 2, actionKind: 'link' as const },
+    whatSecuritySeesGoodInten: { strategy: 'altText' as const, value: 'What Security Sees: Good intentions, unexpected risk', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'What Security Sees: Good intentions, unexpected risk', scopeIndex: 3, actionKind: 'generic' as const },
+    whatSecuritySeesGoodIntenProductEngineeringGlobal: { strategy: 'role' as const, value: 'Product & Engineering: Global Security', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'What Security Sees: Good intentions, unexpected risk', scopeIndex: 3, actionKind: 'link' as const },
+    whatSecuritySeesGoodLink: { strategy: 'role' as const, value: 'What Security Sees: Good intentions, unexpected', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'What Security Sees: Good intentions, unexpected risk', scopeIndex: 3, actionKind: 'link' as const },
+    buildNewsletterJuly2026: { strategy: 'altText' as const, value: 'Build Newsletter - July 2026', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Build Newsletter - July 2026', scopeIndex: 4, actionKind: 'generic' as const },
+    buildNewsletterJuly2026PeopleUkgBuild: { strategy: 'role' as const, value: 'People: UKG Build', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Build Newsletter - July 2026', scopeIndex: 4, actionKind: 'link' as const },
+    policyGovernanceAtUkgBuilLegalRiskCompliance: { strategy: 'role' as const, value: 'Legal: Risk & Compliance', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Policy governance at UKG: Building trust through strong governance', scopeIndex: 5, actionKind: 'link' as const },
+    policyGovernanceAtUkgLink: { strategy: 'text' as const, value: 'Policy governance at UKG: Building trust through strong governance', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Policy governance at UKG: Building trust through strong governance', scopeIndex: 5, actionKind: 'link' as const },
+    photoOfTheWeekLowellOffiInsideUkg: { strategy: 'role' as const, value: 'Inside UKG', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Photo of the Week: Lowell office spotlight', scopeIndex: 6, actionKind: 'link' as const },
+    photoOfTheWeekLink: { strategy: 'role' as const, value: 'Photo of the Week: Lowell office spotlight', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Photo of the Week: Lowell office spotlight', scopeIndex: 6, actionKind: 'link' as const },
+    agencyUAgentAThonMovesIntAiHub: { strategy: 'role' as const, value: 'AI Hub', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'AgencyU Agent-a-thon moves into judging', scopeIndex: 7, actionKind: 'link' as const },
+    agencyUAgentAThonMovesIntoLink: { strategy: 'role' as const, value: 'AgencyU Agent-a-thon moves into judging', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'AgencyU Agent-a-thon moves into judging', scopeIndex: 7, actionKind: 'link' as const },
+    newForresterTotalEconomicI: { strategy: 'altText' as const, value: 'New Forrester Total Economic Impact™ (TEI) study is live!', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'New Forrester Total Economic Impact™ (TEI) study is live!', scopeIndex: 8, actionKind: 'generic' as const },
+    newForresterTotalEconomicLink: { strategy: 'role' as const, value: 'New Forrester Total Economic Impact™ (TEI) study', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'New Forrester Total Economic Impact™ (TEI) study is live!', scopeIndex: 8, actionKind: 'link' as const },
+    july2026HealthAwarenessSp: { strategy: 'altText' as const, value: 'July 2026 health awareness: Spotlight on wellness initiatives', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'July 2026 health awareness: Spotlight on wellness initiatives', scopeIndex: 9, actionKind: 'generic' as const },
+    july2026HealthAwarenessSpPeopleUkgCares: { strategy: 'role' as const, value: 'People: UKG Cares', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'July 2026 health awareness: Spotlight on wellness initiatives', scopeIndex: 9, actionKind: 'link' as const },
+    employeeResourceGroupErg: { strategy: 'altText' as const, value: 'Employee Resource Group (ERG) monthly newsletter: July 2026', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Employee Resource Group (ERG) monthly newsletter: July 2026', scopeIndex: 10, actionKind: 'generic' as const },
+    employeeResourceGroupErgPeopleBelongingImpact: { strategy: 'role' as const, value: 'People: Belonging & Impact', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Employee Resource Group (ERG) monthly newsletter: July 2026', scopeIndex: 10, actionKind: 'link' as const },
+    ukgRiseEarlyCareerLink: { strategy: 'text' as const, value: 'UKG Rise Early Career Month: Build the skills, shape the future', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG Rise Early Career Month: Build the skills, shape the future', scopeIndex: 11, actionKind: 'link' as const },
+    globalSecurityManagedVault: { strategy: 'altText' as const, value: 'Global Security managed Vault certificate migration calendar', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Global Security managed Vault certificate migration calendar', scopeIndex: 12, actionKind: 'generic' as const },
+    globalSecurityManagedVaultLink: { strategy: 'role' as const, value: 'Global Security managed Vault certificate', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Global Security managed Vault certificate migration calendar', scopeIndex: 12, actionKind: 'link' as const },
+    baselineImagesRequiredForN: { strategy: 'altText' as const, value: 'Baseline Images required for new deployments starting July 31', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Baseline Images required for new deployments starting July 31', scopeIndex: 13, actionKind: 'generic' as const },
+    ukgCommonsMobileAppNowAvaCommsEmployeeCommunications: { strategy: 'role' as const, value: 'Comms: Employee Communications', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG Commons mobile app now available', scopeIndex: 14, actionKind: 'link' as const },
+    ukgCommonsMobileAppLink: { strategy: 'role' as const, value: 'UKG Commons mobile app now available', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'UKG Commons mobile app now available', scopeIndex: 14, actionKind: 'link' as const },
+    whatSecuritySeesSometimesLink: { strategy: 'text' as const, value: 'What Security Sees: Sometimes thinking like a cybercriminal starts with “update now”', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'What Security Sees: Sometimes thinking like a cybercriminal starts with “update now”', scopeIndex: 15, actionKind: 'link' as const },
+    disabilityINJuly2026: { strategy: 'altText' as const, value: 'DisabilityIN July 2026', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'DisabilityIN July 2026', scopeIndex: 16, actionKind: 'generic' as const },
+    disabilityINJuly2026PeopleUkgAdapt: { strategy: 'role' as const, value: 'People: UKG Adapt', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'DisabilityIN July 2026', scopeIndex: 16, actionKind: 'link' as const },
+    photoOfTheWeekPhotoOfTheWeekTakeYourC: { strategy: 'role' as const, value: 'Photo of the Week: Take Your Child to Work Day', role: 'link', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Photo of the Week: Take Your Child to Work Day', scopeIndex: 17, actionKind: 'link' as const },
+    doNotEngageWithLink: { strategy: 'text' as const, value: 'Do not engage with unsolicited Teams calls or suspicious emails', scope: '[class*="LatestNewsWidget_smallCard"]', scopeText: 'Do not engage with unsolicited Teams calls or suspicious emails', scopeIndex: 18, actionKind: 'link' as const },
     upcomingEvents: { strategy: 'css' as const, value: '[class*="EventsCalendarWidget_eventsColumn"]', actionKind: 'generic' as const },
     upcomingEventsTitle: { strategy: 'text' as const, value: 'Upcoming events', actionKind: 'generic' as const },
     seeAll: { strategy: 'role' as const, value: 'See all', role: 'button', actionKind: 'button' as const },
     categoryAll: { strategy: 'text' as const, value: 'Category: All', actionKind: 'generic' as const },
     categoryAll2: { strategy: 'css' as const, value: '[class*="UpcomingEvents_selectedCategory"]', actionKind: 'generic' as const },
-    stretchRelaxVirtualGrouPeopleBenefits: { strategy: 'css' as const, value: '[class*="UpcomingEvents_categoryLabel"]', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'generic' as const },
+    stretchRelaxVirtualGrouPeopleBenefits: { strategy: 'text' as const, value: 'People: Benefits', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'generic' as const },
     peopleBenefitsLink: { strategy: 'role' as const, value: 'People: Benefits', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'link' as const },
-    stretchRelaxVirtualGrou: { strategy: 'css' as const, value: '[class*="UpcomingEvents_eventTitle"]', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'generic' as const },
+    stretchRelaxVirtualGrou: { strategy: 'text' as const, value: 'Stretch & Relax - Virtual Group Fitness', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'generic' as const },
     stretchRelaxVirtualGrouLocation: { strategy: 'altText' as const, value: 'location', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'generic' as const },
     stretchRelaxVirtualGrouVirtual: { strategy: 'text' as const, value: 'Virtual', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'text' as const },
     stretchRelaxVirtualGrouAddToCalendar: { strategy: 'role' as const, value: 'Add to calendar', role: 'button', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Stretch & Relax - Virtual Group Fitness', scopeIndex: 0, actionKind: 'button' as const },
-    peopleUkgUnidosLink: { strategy: 'role' as const, value: 'People: UKG Unidos', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Unidos: World Cup Quarterfinal Virtual Watch Party', scopeIndex: 2, actionKind: 'link' as const },
-    peopleUkgNestLink: { strategy: 'role' as const, value: 'People: UKG Nest', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scopeIndex: 11, actionKind: 'link' as const },
-    nestAndAdaptWeRockTheSpeLybertyWayWestford: { strategy: 'text' as const, value: '7 Lyberty Way, Westford MA 01886', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scopeIndex: 11, actionKind: 'text' as const },
-    peopleUkgRiseLink: { strategy: 'role' as const, value: 'People: UKG Rise', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise Virtual Speed Networking', scopeIndex: 13, actionKind: 'link' as const },
-    ukgRiseVirtualSpeedNetworkVirtualZoomMeeting: { strategy: 'text' as const, value: 'Virtual - Zoom Meeting', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise Virtual Speed Networking', scopeIndex: 13, actionKind: 'text' as const },
-    peopleUkgPrideLink: { strategy: 'role' as const, value: 'People: UKG Pride', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Out & Equal Presents: Signal Through the Noise', scopeIndex: 17, actionKind: 'link' as const },
-    outEqualPresentsSignalTVirtualZoom: { strategy: 'text' as const, value: 'Virtual - Zoom', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Out & Equal Presents: Signal Through the Noise', scopeIndex: 17, actionKind: 'text' as const },
+    careerPanelInformationalIPeopleBelongingImpact: { strategy: 'text' as const, value: 'People: Belonging & Impact', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Career Panel & Informational Interviews with Year Up United', scopeIndex: 1, actionKind: 'generic' as const },
+    careerPanelInformationalI: { strategy: 'text' as const, value: 'Career Panel & Informational Interviews with Year Up United', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Career Panel & Informational Interviews with Year Up United', scopeIndex: 1, actionKind: 'generic' as const },
+    coreMoreVirtualGroupFi: { strategy: 'text' as const, value: 'Core & More - Virtual Group Fitness', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Core & More - Virtual Group Fitness', scopeIndex: 3, actionKind: 'generic' as const },
+    ukgUnidosWorldCupSemifinaPeopleUkgUnidos: { strategy: 'text' as const, value: 'People: UKG Unidos', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Unidos: World Cup Semifinal Virtual Watch Party', scopeIndex: 4, actionKind: 'generic' as const },
+    peopleUkgUnidosLink: { strategy: 'role' as const, value: 'People: UKG Unidos', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Unidos: World Cup Semifinal Virtual Watch Party', scopeIndex: 4, actionKind: 'link' as const },
+    ukgUnidosWorldCupSemifina: { strategy: 'text' as const, value: 'UKG Unidos: World Cup Semifinal Virtual Watch Party', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Unidos: World Cup Semifinal Virtual Watch Party', scopeIndex: 4, actionKind: 'generic' as const },
+    nestAndAdaptWeRockTheSpePeopleUkgNest: { strategy: 'text' as const, value: 'People: UKG Nest', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scopeIndex: 5, actionKind: 'generic' as const },
+    peopleUkgNestLink: { strategy: 'role' as const, value: 'People: UKG Nest', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scopeIndex: 5, actionKind: 'link' as const },
+    nestAndAdaptWeRockTheSpe: { strategy: 'text' as const, value: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scopeIndex: 5, actionKind: 'generic' as const },
+    nestAndAdaptWeRockTheSpeLybertyWayWestford: { strategy: 'text' as const, value: '7 Lyberty Way, Westford MA 01886', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'NEST and ADAPT We Rock the Spectrum Volunteer Event in Westford, MA', scopeIndex: 5, actionKind: 'text' as const },
+    beyondTheWorkplaceUnderstanding: { strategy: 'text' as const, value: 'Beyond the Workplace: Understanding Social Influence', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Beyond the Workplace: Understanding Social Influence', scopeIndex: 6, actionKind: 'generic' as const },
+    ukgRiseVirtualSpeedNetworkPeopleUkgRise: { strategy: 'text' as const, value: 'People: UKG Rise', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise Virtual Speed Networking', scopeIndex: 7, actionKind: 'generic' as const },
+    peopleUkgRiseLink: { strategy: 'role' as const, value: 'People: UKG Rise', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise Virtual Speed Networking', scopeIndex: 7, actionKind: 'link' as const },
+    ukgRiseVirtualSpeedNetwork: { strategy: 'text' as const, value: 'UKG Rise Virtual Speed Networking', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise Virtual Speed Networking', scopeIndex: 7, actionKind: 'generic' as const },
+    ukgRiseVirtualSpeedNetworkVirtualZoomMeeting: { strategy: 'text' as const, value: 'Virtual - Zoom Meeting', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise Virtual Speed Networking', scopeIndex: 7, actionKind: 'text' as const },
+    askMeAnythingAboutAiOptiAiHub: { strategy: 'text' as const, value: 'AI Hub', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Ask Me Anything about AI (Option 1)', scopeIndex: 10, actionKind: 'generic' as const },
+    askMeAnythingAboutAiOpti: { strategy: 'text' as const, value: 'Ask Me Anything about AI (Option 1)', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Ask Me Anything about AI (Option 1)', scopeIndex: 10, actionKind: 'generic' as const },
+    outEqualPresentsSignalTPeopleUkgPride: { strategy: 'text' as const, value: 'People: UKG Pride', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Out & Equal Presents: Signal Through the Noise', scopeIndex: 12, actionKind: 'generic' as const },
+    peopleUkgPrideLink: { strategy: 'role' as const, value: 'People: UKG Pride', role: 'link', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Out & Equal Presents: Signal Through the Noise', scopeIndex: 12, actionKind: 'link' as const },
+    outEqualPresentsSignalT: { strategy: 'text' as const, value: 'Out & Equal Presents: Signal Through the Noise', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Out & Equal Presents: Signal Through the Noise', scopeIndex: 12, actionKind: 'generic' as const },
+    outEqualPresentsSignalTVirtualZoom: { strategy: 'text' as const, value: 'Virtual - Zoom', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Out & Equal Presents: Signal Through the Noise', scopeIndex: 12, actionKind: 'text' as const },
+    askMeAnythingAboutAskMeAnythingAboutAiOpti: { strategy: 'text' as const, value: 'Ask Me Anything about AI (Option 2)', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Ask Me Anything about AI (Option 2)', scopeIndex: 13, actionKind: 'generic' as const },
+    spillinTheTeaCoffeeChat: { strategy: 'text' as const, value: 'Spillin The Tea - Coffee Chat', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Spillin The Tea - Coffee Chat', scopeIndex: 15, actionKind: 'generic' as const },
+    spillinTheTeaCoffeeChatVirtualTeams: { strategy: 'text' as const, value: 'Virtual - Teams', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'Spillin The Tea - Coffee Chat', scopeIndex: 15, actionKind: 'text' as const },
+    ukgRiseUkgFireUpRise: { strategy: 'text' as const, value: 'UKG Rise + UKG Fire up - Rise n\' Grind Keynote ft. Courtney Wiley', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise + UKG Fire up - Rise n\' Grind Keynote ft. Courtney Wiley', scopeIndex: 18, actionKind: 'generic' as const },
+    ukgRiseUkgFireUpRiseHybridZoomWebinar: { strategy: 'text' as const, value: 'Hybrid (Zoom Webinar + Office Watch Parties)', scope: '[class*="UpcomingEvents_eventCard"]', scopeText: 'UKG Rise + UKG Fire up - Rise n\' Grind Keynote ft. Courtney Wiley', scopeIndex: 18, actionKind: 'text' as const },
     upcomingMeetings: { strategy: 'css' as const, value: '[class*="EventsCalendarWidget_calendarColumn"]', actionKind: 'generic' as const },
     myCalendar: { strategy: 'role' as const, value: 'My calendar', role: 'heading', level: 3, actionKind: 'text' as const },
     noUpcomingMeetings: { strategy: 'text' as const, value: 'No upcoming meetings', actionKind: 'text' as const },
@@ -161,13 +180,9 @@ export class UkgcommonsPage {
     goToTalentCentral: { strategy: 'role' as const, value: 'Go to Talent Central', role: 'link', actionKind: 'link' as const },
     quickActions: { strategy: 'role' as const, value: 'Quick actions', role: 'heading', level: 3, actionKind: 'text' as const },
     getTechnicalSupport: { strategy: 'role' as const, value: 'Get technical support', role: 'link', actionKind: 'link' as const },
-    getTechnicalSupport2: { strategy: 'title' as const, value: 'Get technical support', actionKind: 'generic' as const },
     viewHolidayCalendar: { strategy: 'role' as const, value: 'View holiday calendar', role: 'link', actionKind: 'link' as const },
-    viewHolidayCalendar2: { strategy: 'title' as const, value: 'View holiday calendar', actionKind: 'generic' as const },
     viewPolicies: { strategy: 'role' as const, value: 'View policies', role: 'link', actionKind: 'link' as const },
-    viewPolicies2: { strategy: 'title' as const, value: 'View policies', actionKind: 'generic' as const },
     manageExpenses: { strategy: 'role' as const, value: 'Manage expenses', role: 'link', actionKind: 'link' as const },
-    manageExpenses2: { strategy: 'title' as const, value: 'Manage expenses', actionKind: 'generic' as const },
     microsoftTodoTitle: { strategy: 'text' as const, value: 'Tasks', actionKind: 'generic' as const },
     viewAndManageYour: { strategy: 'role' as const, value: 'View and manage your Microsoft To Do tasks here.', role: 'img', actionKind: 'generic' as const },
     goToMicrosoftTo: { strategy: 'role' as const, value: 'Go to Microsoft To Do', role: 'link', actionKind: 'link' as const },
@@ -179,13 +194,6 @@ export class UkgcommonsPage {
     hotJobsTitle: { strategy: 'text' as const, value: 'Hot jobs', actionKind: 'generic' as const },
     hotJobsAreFeatured: { strategy: 'role' as const, value: 'Hot Jobs are featured roles that are in high demand across the organization and often require specialized or business-critical skills. These positions are highlighted to increase visibility and attract qualified talent to priority hiring and internal mobility opportunities.', role: 'img', actionKind: 'generic' as const },
     productManagerHcm: { strategy: 'role' as const, value: 'Product Manager - HCM Solutions', role: 'button', actionKind: 'button' as const },
-    productManagerHcmProductManagerHcmSolution: { strategy: 'css' as const, value: '[class*="HotJobs_jobTitle"]', actionKind: 'generic' as const },
-    productManagement: { strategy: 'css' as const, value: '[class*="HotJobs_jobMetaItem"]', actionKind: 'generic' as const },
-    productManagement2: { strategy: 'css' as const, value: '[class*="HotJobs_jobMetaText"]', actionKind: 'generic' as const },
-    londonUkDublinLondonUkDublinIreland: { strategy: 'css' as const, value: '[class*="HotJobs_jobLocationText"]', actionKind: 'generic' as const },
-    remotePostedAMonth: { strategy: 'css' as const, value: '[class*="HotJobs_jobFooter"]', actionKind: 'generic' as const },
-    remote2: { strategy: 'css' as const, value: '[class*="HotJobs_jobLocationTypeText"]', actionKind: 'generic' as const },
-    postedAMonthAgo: { strategy: 'css' as const, value: '[class*="HotJobs_postedDate"]', actionKind: 'generic' as const },
     qaAutomationLead: { strategy: 'role' as const, value: 'QA Automation Lead', role: 'button', actionKind: 'button' as const },
     seniorSoftwareEngineerDriving: { strategy: 'role' as const, value: 'Senior Software Engineer Driving Enterprise Application Development Across Global Teams', role: 'button', actionKind: 'button' as const },
     seniorSoftwareEngineer: { strategy: 'role' as const, value: 'Senior Software Engineer', role: 'button', actionKind: 'button' as const },
@@ -207,10 +215,13 @@ export class UkgcommonsPage {
     newsSavedSuccessfully: { strategy: 'text' as const, value: 'News saved successfully!', actionKind: 'text' as const },
     viewSavedNewsUnder: { strategy: 'role' as const, value: 'View saved news under your profile.', role: 'link', actionKind: 'link' as const },
     jm: { strategy: 'css' as const, value: '[class*="Header_menuProfilePic"]', actionKind: 'generic' as const },
+    jagadeeshM: { strategy: 'text' as const, value: 'Jagadeesh M', actionKind: 'text' as const },
+    jagadeeshMUkgCom: { strategy: 'text' as const, value: 'jagadeesh.m@ukg.com', actionKind: 'text' as const },
     viewAccount: { strategy: 'css' as const, value: '[class*="Header_viewAccount"]', actionKind: 'generic' as const },
     saveIcon: { strategy: 'altText' as const, value: 'save-icon', actionKind: 'generic' as const },
-    mySavedNews: { strategy: 'css' as const, value: '[class*="Header_menuProfileTtitle"]', actionKind: 'generic' as const },
+    mySavedNews: { strategy: 'text' as const, value: 'My saved news', actionKind: 'generic' as const },
     gridIcon: { strategy: 'altText' as const, value: 'grid-icon', actionKind: 'generic' as const },
+    customizeHomePageLayout: { strategy: 'text' as const, value: 'Customize home page layout', actionKind: 'generic' as const },
   } as const;
 
   constructor(private readonly page: Page) {}
@@ -297,6 +308,14 @@ export class UkgcommonsPage {
 
   async expectHiJagadeeshWhatAreVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.hiJagadeeshWhatAre), timeoutMs, soft);
+  }
+
+  async getInnerTextJagadeesh(): Promise<string> {
+    return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeesh));
+  }
+
+  async expectJagadeeshVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs, soft);
   }
 
   async clickSharePoint(): Promise<void> {
@@ -683,20 +702,28 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.seeAllInternalNews), timeoutMs, soft);
   }
 
-  async clickBuildNewsletterJuly(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly));
+  async clickWebinarFeaturingUkgCustomer(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer));
   }
 
-  async expectBuildNewsletterJulyVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs, soft);
+  async expectWebinarFeaturingUkgCustomerVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs, soft);
   }
 
-  async clickPeopleUkgBuild(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild));
+  async clickGtmMarketing(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.gtmMarketing));
   }
 
-  async expectPeopleUkgBuildVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs, soft);
+  async expectGtmMarketingVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs, soft);
+  }
+
+  async clickWebinarFeaturingUkgCustomerLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink));
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs, soft);
   }
 
   async clickComment(): Promise<void> {
@@ -707,12 +734,76 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.comment), timeoutMs, soft);
   }
 
-  async clickPolicyGovernanceAtUkgBuil(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil));
+  async clickQ3FY26SalesRecognitionGtm(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm));
   }
 
-  async expectPolicyGovernanceAtUkgBuilVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs, soft);
+  async expectQ3FY26SalesRecognitionGtmVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs, soft);
+  }
+
+  async clickQ3FY26SalesRecognitionLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink));
+  }
+
+  async expectQ3FY26SalesRecognitionLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs, soft);
+  }
+
+  async clickTheRoleOfHrLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink));
+  }
+
+  async expectTheRoleOfHrLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs, soft);
+  }
+
+  async clickJulySocialSellingUpdatesLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink));
+  }
+
+  async expectJulySocialSellingUpdatesLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs, soft);
+  }
+
+  async clickWhatSecuritySeesGoodInten(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten));
+  }
+
+  async expectWhatSecuritySeesGoodIntenVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs, soft);
+  }
+
+  async clickWhatSecuritySeesGoodIntenProductEngineeringGlobal(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal));
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs, soft);
+  }
+
+  async clickWhatSecuritySeesGoodLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink));
+  }
+
+  async expectWhatSecuritySeesGoodLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs, soft);
+  }
+
+  async clickBuildNewsletterJuly2026(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026));
+  }
+
+  async expectBuildNewsletterJuly2026Visible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs, soft);
+  }
+
+  async clickBuildNewsletterJuly2026PeopleUkgBuild(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild));
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs, soft);
   }
 
   async clickPolicyGovernanceAtUkgBuilLegalRiskCompliance(): Promise<void> {
@@ -771,14 +862,6 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicI), timeoutMs, soft);
   }
 
-  async clickNewForresterTotalEconomicIGtmMarketing(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing));
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs, soft);
-  }
-
   async clickNewForresterTotalEconomicLink(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicLink));
   }
@@ -819,12 +902,12 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.employeeResourceGroupErgPeopleBelongingImpact), timeoutMs, soft);
   }
 
-  async clickUkgRiseEarlyCareerMonthB(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB));
+  async clickUkgRiseEarlyCareerLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink));
   }
 
-  async expectUkgRiseEarlyCareerMonthBVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs, soft);
+  async expectUkgRiseEarlyCareerLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs, soft);
   }
 
   async clickGlobalSecurityManagedVault(): Promise<void> {
@@ -833,14 +916,6 @@ export class UkgcommonsPage {
 
   async expectGlobalSecurityManagedVaultVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVault), timeoutMs, soft);
-  }
-
-  async clickGlobalSecurityManagedVaultProductEngineeringGlobal(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal));
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs, soft);
   }
 
   async clickGlobalSecurityManagedVaultLink(): Promise<void> {
@@ -859,14 +934,6 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.baselineImagesRequiredForN), timeoutMs, soft);
   }
 
-  async clickUkgNucleusRoiLink(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink));
-  }
-
-  async expectUkgNucleusRoiLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs, soft);
-  }
-
   async clickUkgCommonsMobileAppNowAvaCommsEmployeeCommunications(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgCommonsMobileAppNowAvaCommsEmployeeCommunications));
   }
@@ -883,12 +950,12 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgCommonsMobileAppLink), timeoutMs, soft);
   }
 
-  async clickWhatSecuritySeesSometimes(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes));
+  async clickWhatSecuritySeesSometimesLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink));
   }
 
-  async expectWhatSecuritySeesSometimesVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs, soft);
+  async expectWhatSecuritySeesSometimesLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs, soft);
   }
 
   async clickDisabilityINJuly2026(): Promise<void> {
@@ -915,68 +982,12 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.photoOfTheWeekPhotoOfTheWeekTakeYourC), timeoutMs, soft);
   }
 
-  async clickDoNotEngageWithUnsolicited(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited));
+  async clickDoNotEngageWithLink(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink));
   }
 
-  async expectDoNotEngageWithUnsolicitedVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs, soft);
-  }
-
-  async clickThankYouForParticipatingIn(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn));
-  }
-
-  async expectThankYouForParticipatingInVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs, soft);
-  }
-
-  async clickThankYouForParticipatingInPeopleEmployeeExperience(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience));
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs, soft);
-  }
-
-  async clickThankYouForParticipatingLink(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink));
-  }
-
-  async expectThankYouForParticipatingLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs, soft);
-  }
-
-  async clickBigWinForUkgCommsAnalystRelations(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations));
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs, soft);
-  }
-
-  async clickBigWinForLink(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForLink));
-  }
-
-  async expectBigWinForLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs, soft);
-  }
-
-  async clickTuneInTodayUkgAdLink(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink));
-  }
-
-  async expectTuneInTodayUkgAdLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs, soft);
-  }
-
-  async clickClaudeEnterpriseAccessForN(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN));
-  }
-
-  async expectClaudeEnterpriseAccessForNVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs, soft);
+  async expectDoNotEngageWithLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs, soft);
   }
 
   async clickUpcomingEvents(): Promise<void> {
@@ -1075,12 +1086,60 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.stretchRelaxVirtualGrouAddToCalendar), timeoutMs, soft);
   }
 
+  async clickCareerPanelInformationalIPeopleBelongingImpact(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact));
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs, soft);
+  }
+
+  async clickCareerPanelInformationalI(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI));
+  }
+
+  async expectCareerPanelInformationalIVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs, soft);
+  }
+
+  async clickCoreMoreVirtualGroupFi(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi));
+  }
+
+  async expectCoreMoreVirtualGroupFiVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs, soft);
+  }
+
+  async clickUkgUnidosWorldCupSemifinaPeopleUkgUnidos(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos));
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs, soft);
+  }
+
   async clickPeopleUkgUnidosLink(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgUnidosLink));
   }
 
   async expectPeopleUkgUnidosLinkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgUnidosLink), timeoutMs, soft);
+  }
+
+  async clickUkgUnidosWorldCupSemifina(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina));
+  }
+
+  async expectUkgUnidosWorldCupSemifinaVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs, soft);
+  }
+
+  async clickNestAndAdaptWeRockTheSpePeopleUkgNest(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest));
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs, soft);
   }
 
   async clickPeopleUkgNestLink(): Promise<void> {
@@ -1091,12 +1150,36 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgNestLink), timeoutMs, soft);
   }
 
+  async clickNestAndAdaptWeRockTheSpe(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe));
+  }
+
+  async expectNestAndAdaptWeRockTheSpeVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs, soft);
+  }
+
   async getInnerTextNestAndAdaptWeRockTheSpeLybertyWayWestford(): Promise<string> {
     return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpeLybertyWayWestford));
   }
 
   async expectNestAndAdaptWeRockTheSpeLybertyWayWestfordVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpeLybertyWayWestford), timeoutMs, soft);
+  }
+
+  async clickBeyondTheWorkplaceUnderstanding(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding));
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs, soft);
+  }
+
+  async clickUkgRiseVirtualSpeedNetworkPeopleUkgRise(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise));
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs, soft);
   }
 
   async clickPeopleUkgRiseLink(): Promise<void> {
@@ -1107,12 +1190,44 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgRiseLink), timeoutMs, soft);
   }
 
+  async clickUkgRiseVirtualSpeedNetwork(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork));
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs, soft);
+  }
+
   async getInnerTextUkgRiseVirtualSpeedNetworkVirtualZoomMeeting(): Promise<string> {
     return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkVirtualZoomMeeting));
   }
 
   async expectUkgRiseVirtualSpeedNetworkVirtualZoomMeetingVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkVirtualZoomMeeting), timeoutMs, soft);
+  }
+
+  async clickAskMeAnythingAboutAiOptiAiHub(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub));
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs, soft);
+  }
+
+  async clickAskMeAnythingAboutAiOpti(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti));
+  }
+
+  async expectAskMeAnythingAboutAiOptiVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs, soft);
+  }
+
+  async clickOutEqualPresentsSignalTPeopleUkgPride(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride));
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs, soft);
   }
 
   async clickPeopleUkgPrideLink(): Promise<void> {
@@ -1123,12 +1238,60 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgPrideLink), timeoutMs, soft);
   }
 
+  async clickOutEqualPresentsSignalT(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT));
+  }
+
+  async expectOutEqualPresentsSignalTVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs, soft);
+  }
+
   async getInnerTextOutEqualPresentsSignalTVirtualZoom(): Promise<string> {
     return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTVirtualZoom));
   }
 
   async expectOutEqualPresentsSignalTVirtualZoomVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTVirtualZoom), timeoutMs, soft);
+  }
+
+  async clickAskMeAnythingAboutAskMeAnythingAboutAiOpti(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti));
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs, soft);
+  }
+
+  async clickSpillinTheTeaCoffeeChat(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat));
+  }
+
+  async expectSpillinTheTeaCoffeeChatVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs, soft);
+  }
+
+  async getInnerTextSpillinTheTeaCoffeeChatVirtualTeams(): Promise<string> {
+    return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams));
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs, soft);
+  }
+
+  async clickUkgRiseUkgFireUpRise(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise));
+  }
+
+  async expectUkgRiseUkgFireUpRiseVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs, soft);
+  }
+
+  async getInnerTextUkgRiseUkgFireUpRiseHybridZoomWebinar(): Promise<string> {
+    return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar));
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs, soft);
   }
 
   async clickUpcomingMeetings(): Promise<void> {
@@ -1259,28 +1422,12 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport), timeoutMs, soft);
   }
 
-  async clickGetTechnicalSupport2(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2));
-  }
-
-  async expectGetTechnicalSupport2Visible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs, soft);
-  }
-
   async clickViewHolidayCalendar(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar));
   }
 
   async expectViewHolidayCalendarVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar), timeoutMs, soft);
-  }
-
-  async clickViewHolidayCalendar2(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2));
-  }
-
-  async expectViewHolidayCalendar2Visible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs, soft);
   }
 
   async clickViewPolicies(): Promise<void> {
@@ -1291,28 +1438,12 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies), timeoutMs, soft);
   }
 
-  async clickViewPolicies2(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies2));
-  }
-
-  async expectViewPolicies2Visible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs, soft);
-  }
-
   async clickManageExpenses(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses));
   }
 
   async expectManageExpensesVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses), timeoutMs, soft);
-  }
-
-  async clickManageExpenses2(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses2));
-  }
-
-  async expectManageExpenses2Visible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs, soft);
   }
 
   async clickMicrosoftTodoTitle(): Promise<void> {
@@ -1413,62 +1544,6 @@ export class UkgcommonsPage {
 
   async expectProductManagerHcmVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcm), timeoutMs, soft);
-  }
-
-  async clickProductManagerHcmProductManagerHcmSolution(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution));
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs, soft);
-  }
-
-  async clickProductManagement(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement));
-  }
-
-  async expectProductManagementVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs, soft);
-  }
-
-  async clickProductManagement2(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement2));
-  }
-
-  async expectProductManagement2Visible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs, soft);
-  }
-
-  async clickLondonUkDublinLondonUkDublinIreland(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland));
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs, soft);
-  }
-
-  async clickRemotePostedAMonth(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth));
-  }
-
-  async expectRemotePostedAMonthVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs, soft);
-  }
-
-  async clickRemote2(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.remote2));
-  }
-
-  async expectRemote2Visible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs, soft);
-  }
-
-  async clickPostedAMonthAgo(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo));
-  }
-
-  async expectPostedAMonthAgoVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs, soft);
   }
 
   async clickQaAutomationLead(): Promise<void> {
@@ -1693,6 +1768,22 @@ export class UkgcommonsPage {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.jm), timeoutMs, soft);
   }
 
+  async getInnerTextJagadeeshM(): Promise<string> {
+    return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshM));
+  }
+
+  async expectJagadeeshMVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs, soft);
+  }
+
+  async getInnerTextJagadeeshMUkgCom(): Promise<string> {
+    return getTextWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom));
+  }
+
+  async expectJagadeeshMUkgComVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs, soft);
+  }
+
   async clickViewAccount(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewAccount));
   }
@@ -1723,6 +1814,14 @@ export class UkgcommonsPage {
 
   async expectGridIconVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, UkgcommonsPage.L.gridIcon), timeoutMs, soft);
+  }
+
+  async clickCustomizeHomePageLayout(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout));
+  }
+
+  async expectCustomizeHomePageLayoutVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs, soft);
   }
 
 
@@ -2180,6 +2279,62 @@ export class UkgcommonsPage {
 
   async scrollHiJagadeeshWhatAreIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.hiJagadeeshWhatAre));
+  }
+
+  async clickJagadeesh(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeesh));
+  }
+
+  async doubleClickJagadeesh(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeesh));
+  }
+
+  async longPressJagadeesh(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeesh));
+  }
+
+  async expectJagadeeshHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs);
+  }
+
+  async expectJagadeeshText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.jagadeesh), expected, timeoutMs);
+  }
+
+  async expectJagadeeshContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.jagadeesh), substring, timeoutMs);
+  }
+
+  async expectJagadeeshValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.jagadeesh), value, timeoutMs);
+  }
+
+  async expectJagadeeshEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs);
+  }
+
+  async expectJagadeeshDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs);
+  }
+
+  async expectJagadeeshChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs);
+  }
+
+  async expectJagadeeshUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs);
+  }
+
+  async expectJagadeeshFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.jagadeesh), timeoutMs);
+  }
+
+  async expectJagadeeshCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.jagadeesh), count, timeoutMs);
+  }
+
+  async scrollJagadeeshIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeesh));
   }
 
   async longPressSharePoint(): Promise<void> {
@@ -4254,108 +4409,160 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.seeAllInternalNews));
   }
 
-  async doubleClickBuildNewsletterJuly(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly));
+  async doubleClickWebinarFeaturingUkgCustomer(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer));
   }
 
-  async longPressBuildNewsletterJuly(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly));
+  async longPressWebinarFeaturingUkgCustomer(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer));
   }
 
-  async expectBuildNewsletterJulyHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs);
+  async expectWebinarFeaturingUkgCustomerHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs);
   }
 
-  async expectBuildNewsletterJulyText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), expected, timeoutMs);
+  async expectWebinarFeaturingUkgCustomerText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), expected, timeoutMs);
   }
 
-  async expectBuildNewsletterJulyContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), substring, timeoutMs);
+  async expectWebinarFeaturingUkgCustomerContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), substring, timeoutMs);
   }
 
-  async expectBuildNewsletterJulyValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), value, timeoutMs);
+  async expectWebinarFeaturingUkgCustomerValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), value, timeoutMs);
   }
 
-  async expectBuildNewsletterJulyEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs);
+  async expectWebinarFeaturingUkgCustomerEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs);
   }
 
-  async expectBuildNewsletterJulyDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs);
+  async expectWebinarFeaturingUkgCustomerDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs);
   }
 
-  async expectBuildNewsletterJulyChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs);
+  async expectWebinarFeaturingUkgCustomerChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs);
   }
 
-  async expectBuildNewsletterJulyUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs);
+  async expectWebinarFeaturingUkgCustomerUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs);
   }
 
-  async expectBuildNewsletterJulyFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), timeoutMs);
+  async expectWebinarFeaturingUkgCustomerFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), timeoutMs);
   }
 
-  async expectBuildNewsletterJulyCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly), count, timeoutMs);
+  async expectWebinarFeaturingUkgCustomerCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer), count, timeoutMs);
   }
 
-  async scrollBuildNewsletterJulyIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly));
+  async scrollWebinarFeaturingUkgCustomerIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomer));
   }
 
-  async doubleClickPeopleUkgBuild(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild));
+  async doubleClickGtmMarketing(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.gtmMarketing));
   }
 
-  async longPressPeopleUkgBuild(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild));
+  async longPressGtmMarketing(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.gtmMarketing));
   }
 
-  async expectPeopleUkgBuildHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs);
+  async expectGtmMarketingHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs);
   }
 
-  async expectPeopleUkgBuildText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), expected, timeoutMs);
+  async expectGtmMarketingText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), expected, timeoutMs);
   }
 
-  async expectPeopleUkgBuildContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), substring, timeoutMs);
+  async expectGtmMarketingContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), substring, timeoutMs);
   }
 
-  async expectPeopleUkgBuildValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), value, timeoutMs);
+  async expectGtmMarketingValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), value, timeoutMs);
   }
 
-  async expectPeopleUkgBuildEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs);
+  async expectGtmMarketingEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs);
   }
 
-  async expectPeopleUkgBuildDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs);
+  async expectGtmMarketingDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs);
   }
 
-  async expectPeopleUkgBuildChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs);
+  async expectGtmMarketingChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs);
   }
 
-  async expectPeopleUkgBuildUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs);
+  async expectGtmMarketingUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs);
   }
 
-  async expectPeopleUkgBuildFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), timeoutMs);
+  async expectGtmMarketingFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), timeoutMs);
   }
 
-  async expectPeopleUkgBuildCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild), count, timeoutMs);
+  async expectGtmMarketingCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.gtmMarketing), count, timeoutMs);
   }
 
-  async scrollPeopleUkgBuildIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgBuild));
+  async scrollGtmMarketingIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.gtmMarketing));
+  }
+
+  async doubleClickWebinarFeaturingUkgCustomerLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink));
+  }
+
+  async longPressWebinarFeaturingUkgCustomerLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink));
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), expected, timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), substring, timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), value, timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), timeoutMs);
+  }
+
+  async expectWebinarFeaturingUkgCustomerLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink), count, timeoutMs);
+  }
+
+  async scrollWebinarFeaturingUkgCustomerLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.webinarFeaturingUkgCustomerLink));
   }
 
   async doubleClickComment(): Promise<void> {
@@ -4410,56 +4617,472 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.comment));
   }
 
-  async doubleClickPolicyGovernanceAtUkgBuil(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil));
+  async doubleClickQ3FY26SalesRecognitionGtm(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm));
   }
 
-  async longPressPolicyGovernanceAtUkgBuil(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil));
+  async longPressQ3FY26SalesRecognitionGtm(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm));
   }
 
-  async expectPolicyGovernanceAtUkgBuilHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), expected, timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), expected, timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), substring, timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), substring, timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), value, timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), value, timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), timeoutMs);
   }
 
-  async expectPolicyGovernanceAtUkgBuilCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil), count, timeoutMs);
+  async expectQ3FY26SalesRecognitionGtmCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm), count, timeoutMs);
   }
 
-  async scrollPolicyGovernanceAtUkgBuilIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.policyGovernanceAtUkgBuil));
+  async scrollQ3FY26SalesRecognitionGtmIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionGtm));
+  }
+
+  async doubleClickQ3FY26SalesRecognitionLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink));
+  }
+
+  async longPressQ3FY26SalesRecognitionLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink));
+  }
+
+  async expectQ3FY26SalesRecognitionLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), expected, timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), substring, timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), value, timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), timeoutMs);
+  }
+
+  async expectQ3FY26SalesRecognitionLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink), count, timeoutMs);
+  }
+
+  async scrollQ3FY26SalesRecognitionLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.q3FY26SalesRecognitionLink));
+  }
+
+  async doubleClickTheRoleOfHrLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink));
+  }
+
+  async longPressTheRoleOfHrLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink));
+  }
+
+  async expectTheRoleOfHrLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), expected, timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), substring, timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), value, timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), timeoutMs);
+  }
+
+  async expectTheRoleOfHrLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink), count, timeoutMs);
+  }
+
+  async scrollTheRoleOfHrLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.theRoleOfHrLink));
+  }
+
+  async doubleClickJulySocialSellingUpdatesLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink));
+  }
+
+  async longPressJulySocialSellingUpdatesLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink));
+  }
+
+  async expectJulySocialSellingUpdatesLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), expected, timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), substring, timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), value, timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), timeoutMs);
+  }
+
+  async expectJulySocialSellingUpdatesLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink), count, timeoutMs);
+  }
+
+  async scrollJulySocialSellingUpdatesLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.julySocialSellingUpdatesLink));
+  }
+
+  async doubleClickWhatSecuritySeesGoodInten(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten));
+  }
+
+  async longPressWhatSecuritySeesGoodInten(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten));
+  }
+
+  async expectWhatSecuritySeesGoodIntenHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), expected, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), substring, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), value, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten), count, timeoutMs);
+  }
+
+  async scrollWhatSecuritySeesGoodIntenIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodInten));
+  }
+
+  async doubleClickWhatSecuritySeesGoodIntenProductEngineeringGlobal(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal));
+  }
+
+  async longPressWhatSecuritySeesGoodIntenProductEngineeringGlobal(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal));
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), expected, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), substring, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), value, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodIntenProductEngineeringGlobalCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal), count, timeoutMs);
+  }
+
+  async scrollWhatSecuritySeesGoodIntenProductEngineeringGlobalIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodIntenProductEngineeringGlobal));
+  }
+
+  async doubleClickWhatSecuritySeesGoodLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink));
+  }
+
+  async longPressWhatSecuritySeesGoodLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink));
+  }
+
+  async expectWhatSecuritySeesGoodLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), expected, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), substring, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), value, timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), timeoutMs);
+  }
+
+  async expectWhatSecuritySeesGoodLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink), count, timeoutMs);
+  }
+
+  async scrollWhatSecuritySeesGoodLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesGoodLink));
+  }
+
+  async doubleClickBuildNewsletterJuly2026(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026));
+  }
+
+  async longPressBuildNewsletterJuly2026(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026));
+  }
+
+  async expectBuildNewsletterJuly2026Hidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Text(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), expected, timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), substring, timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Value(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), value, timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Enabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Disabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Checked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Unchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Focused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026Count(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026), count, timeoutMs);
+  }
+
+  async scrollBuildNewsletterJuly2026IntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026));
+  }
+
+  async doubleClickBuildNewsletterJuly2026PeopleUkgBuild(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild));
+  }
+
+  async longPressBuildNewsletterJuly2026PeopleUkgBuild(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild));
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), expected, timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), substring, timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), value, timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), timeoutMs);
+  }
+
+  async expectBuildNewsletterJuly2026PeopleUkgBuildCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild), count, timeoutMs);
+  }
+
+  async scrollBuildNewsletterJuly2026PeopleUkgBuildIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.buildNewsletterJuly2026PeopleUkgBuild));
   }
 
   async doubleClickPolicyGovernanceAtUkgBuilLegalRiskCompliance(): Promise<void> {
@@ -4826,58 +5449,6 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicI));
   }
 
-  async doubleClickNewForresterTotalEconomicIGtmMarketing(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing));
-  }
-
-  async longPressNewForresterTotalEconomicIGtmMarketing(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing));
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), expected, timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), substring, timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), value, timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), timeoutMs);
-  }
-
-  async expectNewForresterTotalEconomicIGtmMarketingCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing), count, timeoutMs);
-  }
-
-  async scrollNewForresterTotalEconomicIGtmMarketingIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicIGtmMarketing));
-  }
-
   async doubleClickNewForresterTotalEconomicLink(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.newForresterTotalEconomicLink));
   }
@@ -5138,56 +5709,56 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.employeeResourceGroupErgPeopleBelongingImpact));
   }
 
-  async doubleClickUkgRiseEarlyCareerMonthB(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB));
+  async doubleClickUkgRiseEarlyCareerLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink));
   }
 
-  async longPressUkgRiseEarlyCareerMonthB(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB));
+  async longPressUkgRiseEarlyCareerLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink));
   }
 
-  async expectUkgRiseEarlyCareerMonthBHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs);
+  async expectUkgRiseEarlyCareerLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), expected, timeoutMs);
+  async expectUkgRiseEarlyCareerLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), expected, timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), substring, timeoutMs);
+  async expectUkgRiseEarlyCareerLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), substring, timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), value, timeoutMs);
+  async expectUkgRiseEarlyCareerLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), value, timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs);
+  async expectUkgRiseEarlyCareerLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs);
+  async expectUkgRiseEarlyCareerLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs);
+  async expectUkgRiseEarlyCareerLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs);
+  async expectUkgRiseEarlyCareerLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), timeoutMs);
+  async expectUkgRiseEarlyCareerLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), timeoutMs);
   }
 
-  async expectUkgRiseEarlyCareerMonthBCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB), count, timeoutMs);
+  async expectUkgRiseEarlyCareerLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink), count, timeoutMs);
   }
 
-  async scrollUkgRiseEarlyCareerMonthBIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerMonthB));
+  async scrollUkgRiseEarlyCareerLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseEarlyCareerLink));
   }
 
   async doubleClickGlobalSecurityManagedVault(): Promise<void> {
@@ -5240,58 +5811,6 @@ export class UkgcommonsPage {
 
   async scrollGlobalSecurityManagedVaultIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVault));
-  }
-
-  async doubleClickGlobalSecurityManagedVaultProductEngineeringGlobal(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal));
-  }
-
-  async longPressGlobalSecurityManagedVaultProductEngineeringGlobal(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal));
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), expected, timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), substring, timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), value, timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), timeoutMs);
-  }
-
-  async expectGlobalSecurityManagedVaultProductEngineeringGlobalCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal), count, timeoutMs);
-  }
-
-  async scrollGlobalSecurityManagedVaultProductEngineeringGlobalIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.globalSecurityManagedVaultProductEngineeringGlobal));
   }
 
   async doubleClickGlobalSecurityManagedVaultLink(): Promise<void> {
@@ -5398,58 +5917,6 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.baselineImagesRequiredForN));
   }
 
-  async doubleClickUkgNucleusRoiLink(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink));
-  }
-
-  async longPressUkgNucleusRoiLink(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink));
-  }
-
-  async expectUkgNucleusRoiLinkHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), expected, timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), substring, timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), value, timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), timeoutMs);
-  }
-
-  async expectUkgNucleusRoiLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink), count, timeoutMs);
-  }
-
-  async scrollUkgNucleusRoiLinkIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgNucleusRoiLink));
-  }
-
   async doubleClickUkgCommonsMobileAppNowAvaCommsEmployeeCommunications(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgCommonsMobileAppNowAvaCommsEmployeeCommunications));
   }
@@ -5554,56 +6021,56 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgCommonsMobileAppLink));
   }
 
-  async doubleClickWhatSecuritySeesSometimes(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes));
+  async doubleClickWhatSecuritySeesSometimesLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink));
   }
 
-  async longPressWhatSecuritySeesSometimes(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes));
+  async longPressWhatSecuritySeesSometimesLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink));
   }
 
-  async expectWhatSecuritySeesSometimesHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), expected, timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), expected, timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), substring, timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), substring, timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), value, timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), value, timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), timeoutMs);
   }
 
-  async expectWhatSecuritySeesSometimesCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes), count, timeoutMs);
+  async expectWhatSecuritySeesSometimesLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink), count, timeoutMs);
   }
 
-  async scrollWhatSecuritySeesSometimesIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimes));
+  async scrollWhatSecuritySeesSometimesLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.whatSecuritySeesSometimesLink));
   }
 
   async doubleClickDisabilityINJuly2026(): Promise<void> {
@@ -5762,420 +6229,56 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.photoOfTheWeekPhotoOfTheWeekTakeYourC));
   }
 
-  async doubleClickDoNotEngageWithUnsolicited(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited));
+  async doubleClickDoNotEngageWithLink(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink));
   }
 
-  async longPressDoNotEngageWithUnsolicited(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited));
+  async longPressDoNotEngageWithLink(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink));
   }
 
-  async expectDoNotEngageWithUnsolicitedHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs);
+  async expectDoNotEngageWithLinkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), expected, timeoutMs);
+  async expectDoNotEngageWithLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), expected, timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), substring, timeoutMs);
+  async expectDoNotEngageWithLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), substring, timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), value, timeoutMs);
+  async expectDoNotEngageWithLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), value, timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs);
+  async expectDoNotEngageWithLinkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs);
+  async expectDoNotEngageWithLinkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs);
+  async expectDoNotEngageWithLinkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs);
+  async expectDoNotEngageWithLinkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), timeoutMs);
+  async expectDoNotEngageWithLinkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), timeoutMs);
   }
 
-  async expectDoNotEngageWithUnsolicitedCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited), count, timeoutMs);
+  async expectDoNotEngageWithLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink), count, timeoutMs);
   }
 
-  async scrollDoNotEngageWithUnsolicitedIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithUnsolicited));
-  }
-
-  async doubleClickThankYouForParticipatingIn(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn));
-  }
-
-  async longPressThankYouForParticipatingIn(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn));
-  }
-
-  async expectThankYouForParticipatingInHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), expected, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), substring, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), value, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn), count, timeoutMs);
-  }
-
-  async scrollThankYouForParticipatingInIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingIn));
-  }
-
-  async doubleClickThankYouForParticipatingInPeopleEmployeeExperience(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience));
-  }
-
-  async longPressThankYouForParticipatingInPeopleEmployeeExperience(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience));
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), expected, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), substring, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), value, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingInPeopleEmployeeExperienceCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience), count, timeoutMs);
-  }
-
-  async scrollThankYouForParticipatingInPeopleEmployeeExperienceIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingInPeopleEmployeeExperience));
-  }
-
-  async doubleClickThankYouForParticipatingLink(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink));
-  }
-
-  async longPressThankYouForParticipatingLink(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink));
-  }
-
-  async expectThankYouForParticipatingLinkHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), expected, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), substring, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), value, timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), timeoutMs);
-  }
-
-  async expectThankYouForParticipatingLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink), count, timeoutMs);
-  }
-
-  async scrollThankYouForParticipatingLinkIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.thankYouForParticipatingLink));
-  }
-
-  async doubleClickBigWinForUkgCommsAnalystRelations(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations));
-  }
-
-  async longPressBigWinForUkgCommsAnalystRelations(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations));
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), expected, timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), substring, timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), value, timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), timeoutMs);
-  }
-
-  async expectBigWinForUkgCommsAnalystRelationsCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations), count, timeoutMs);
-  }
-
-  async scrollBigWinForUkgCommsAnalystRelationsIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForUkgCommsAnalystRelations));
-  }
-
-  async doubleClickBigWinForLink(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForLink));
-  }
-
-  async longPressBigWinForLink(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForLink));
-  }
-
-  async expectBigWinForLinkHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs);
-  }
-
-  async expectBigWinForLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), expected, timeoutMs);
-  }
-
-  async expectBigWinForLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), substring, timeoutMs);
-  }
-
-  async expectBigWinForLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), value, timeoutMs);
-  }
-
-  async expectBigWinForLinkEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs);
-  }
-
-  async expectBigWinForLinkDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs);
-  }
-
-  async expectBigWinForLinkChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs);
-  }
-
-  async expectBigWinForLinkUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs);
-  }
-
-  async expectBigWinForLinkFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), timeoutMs);
-  }
-
-  async expectBigWinForLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.bigWinForLink), count, timeoutMs);
-  }
-
-  async scrollBigWinForLinkIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.bigWinForLink));
-  }
-
-  async doubleClickTuneInTodayUkgAdLink(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink));
-  }
-
-  async longPressTuneInTodayUkgAdLink(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink));
-  }
-
-  async expectTuneInTodayUkgAdLinkHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), expected, timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), substring, timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), value, timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), timeoutMs);
-  }
-
-  async expectTuneInTodayUkgAdLinkCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink), count, timeoutMs);
-  }
-
-  async scrollTuneInTodayUkgAdLinkIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.tuneInTodayUkgAdLink));
-  }
-
-  async doubleClickClaudeEnterpriseAccessForN(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN));
-  }
-
-  async longPressClaudeEnterpriseAccessForN(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN));
-  }
-
-  async expectClaudeEnterpriseAccessForNHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), expected, timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), substring, timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), value, timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), timeoutMs);
-  }
-
-  async expectClaudeEnterpriseAccessForNCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN), count, timeoutMs);
-  }
-
-  async scrollClaudeEnterpriseAccessForNIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.claudeEnterpriseAccessForN));
+  async scrollDoNotEngageWithLinkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.doNotEngageWithLink));
   }
 
   async doubleClickUpcomingEvents(): Promise<void> {
@@ -6746,6 +6849,214 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.stretchRelaxVirtualGrouAddToCalendar));
   }
 
+  async doubleClickCareerPanelInformationalIPeopleBelongingImpact(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact));
+  }
+
+  async longPressCareerPanelInformationalIPeopleBelongingImpact(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact));
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), expected, timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), substring, timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), value, timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIPeopleBelongingImpactCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact), count, timeoutMs);
+  }
+
+  async scrollCareerPanelInformationalIPeopleBelongingImpactIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalIPeopleBelongingImpact));
+  }
+
+  async doubleClickCareerPanelInformationalI(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI));
+  }
+
+  async longPressCareerPanelInformationalI(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI));
+  }
+
+  async expectCareerPanelInformationalIHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), expected, timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), substring, timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), value, timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalIFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), timeoutMs);
+  }
+
+  async expectCareerPanelInformationalICount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI), count, timeoutMs);
+  }
+
+  async scrollCareerPanelInformationalIIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.careerPanelInformationalI));
+  }
+
+  async doubleClickCoreMoreVirtualGroupFi(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi));
+  }
+
+  async longPressCoreMoreVirtualGroupFi(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi));
+  }
+
+  async expectCoreMoreVirtualGroupFiHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), expected, timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), substring, timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), value, timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), timeoutMs);
+  }
+
+  async expectCoreMoreVirtualGroupFiCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi), count, timeoutMs);
+  }
+
+  async scrollCoreMoreVirtualGroupFiIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.coreMoreVirtualGroupFi));
+  }
+
+  async doubleClickUkgUnidosWorldCupSemifinaPeopleUkgUnidos(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos));
+  }
+
+  async longPressUkgUnidosWorldCupSemifinaPeopleUkgUnidos(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos));
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), expected, timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), substring, timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), value, timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaPeopleUkgUnidosCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos), count, timeoutMs);
+  }
+
+  async scrollUkgUnidosWorldCupSemifinaPeopleUkgUnidosIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifinaPeopleUkgUnidos));
+  }
+
   async doubleClickPeopleUkgUnidosLink(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgUnidosLink));
   }
@@ -6798,6 +7109,110 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgUnidosLink));
   }
 
+  async doubleClickUkgUnidosWorldCupSemifina(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina));
+  }
+
+  async longPressUkgUnidosWorldCupSemifina(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina));
+  }
+
+  async expectUkgUnidosWorldCupSemifinaHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), expected, timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), substring, timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), value, timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), timeoutMs);
+  }
+
+  async expectUkgUnidosWorldCupSemifinaCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina), count, timeoutMs);
+  }
+
+  async scrollUkgUnidosWorldCupSemifinaIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgUnidosWorldCupSemifina));
+  }
+
+  async doubleClickNestAndAdaptWeRockTheSpePeopleUkgNest(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest));
+  }
+
+  async longPressNestAndAdaptWeRockTheSpePeopleUkgNest(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest));
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), expected, timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), substring, timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), value, timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpePeopleUkgNestCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest), count, timeoutMs);
+  }
+
+  async scrollNestAndAdaptWeRockTheSpePeopleUkgNestIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpePeopleUkgNest));
+  }
+
   async doubleClickPeopleUkgNestLink(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgNestLink));
   }
@@ -6848,6 +7263,58 @@ export class UkgcommonsPage {
 
   async scrollPeopleUkgNestLinkIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgNestLink));
+  }
+
+  async doubleClickNestAndAdaptWeRockTheSpe(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe));
+  }
+
+  async longPressNestAndAdaptWeRockTheSpe(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe));
+  }
+
+  async expectNestAndAdaptWeRockTheSpeHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), expected, timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), substring, timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), value, timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), timeoutMs);
+  }
+
+  async expectNestAndAdaptWeRockTheSpeCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe), count, timeoutMs);
+  }
+
+  async scrollNestAndAdaptWeRockTheSpeIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpe));
   }
 
   async clickNestAndAdaptWeRockTheSpeLybertyWayWestford(): Promise<void> {
@@ -6906,6 +7373,110 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.nestAndAdaptWeRockTheSpeLybertyWayWestford));
   }
 
+  async doubleClickBeyondTheWorkplaceUnderstanding(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding));
+  }
+
+  async longPressBeyondTheWorkplaceUnderstanding(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding));
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), expected, timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), substring, timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), value, timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), timeoutMs);
+  }
+
+  async expectBeyondTheWorkplaceUnderstandingCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding), count, timeoutMs);
+  }
+
+  async scrollBeyondTheWorkplaceUnderstandingIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.beyondTheWorkplaceUnderstanding));
+  }
+
+  async doubleClickUkgRiseVirtualSpeedNetworkPeopleUkgRise(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise));
+  }
+
+  async longPressUkgRiseVirtualSpeedNetworkPeopleUkgRise(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise));
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), expected, timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), substring, timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), value, timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkPeopleUkgRiseCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise), count, timeoutMs);
+  }
+
+  async scrollUkgRiseVirtualSpeedNetworkPeopleUkgRiseIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkPeopleUkgRise));
+  }
+
   async doubleClickPeopleUkgRiseLink(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgRiseLink));
   }
@@ -6956,6 +7527,58 @@ export class UkgcommonsPage {
 
   async scrollPeopleUkgRiseLinkIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgRiseLink));
+  }
+
+  async doubleClickUkgRiseVirtualSpeedNetwork(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork));
+  }
+
+  async longPressUkgRiseVirtualSpeedNetwork(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork));
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), expected, timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), substring, timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), value, timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), timeoutMs);
+  }
+
+  async expectUkgRiseVirtualSpeedNetworkCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork), count, timeoutMs);
+  }
+
+  async scrollUkgRiseVirtualSpeedNetworkIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetwork));
   }
 
   async clickUkgRiseVirtualSpeedNetworkVirtualZoomMeeting(): Promise<void> {
@@ -7014,6 +7637,162 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseVirtualSpeedNetworkVirtualZoomMeeting));
   }
 
+  async doubleClickAskMeAnythingAboutAiOptiAiHub(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub));
+  }
+
+  async longPressAskMeAnythingAboutAiOptiAiHub(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub));
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), expected, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), substring, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), value, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiAiHubCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub), count, timeoutMs);
+  }
+
+  async scrollAskMeAnythingAboutAiOptiAiHubIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOptiAiHub));
+  }
+
+  async doubleClickAskMeAnythingAboutAiOpti(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti));
+  }
+
+  async longPressAskMeAnythingAboutAiOpti(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti));
+  }
+
+  async expectAskMeAnythingAboutAiOptiHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), expected, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), substring, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), value, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAiOptiCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti), count, timeoutMs);
+  }
+
+  async scrollAskMeAnythingAboutAiOptiIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAiOpti));
+  }
+
+  async doubleClickOutEqualPresentsSignalTPeopleUkgPride(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride));
+  }
+
+  async longPressOutEqualPresentsSignalTPeopleUkgPride(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride));
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), expected, timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), substring, timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), value, timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTPeopleUkgPrideCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride), count, timeoutMs);
+  }
+
+  async scrollOutEqualPresentsSignalTPeopleUkgPrideIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTPeopleUkgPride));
+  }
+
   async doubleClickPeopleUkgPrideLink(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgPrideLink));
   }
@@ -7064,6 +7843,58 @@ export class UkgcommonsPage {
 
   async scrollPeopleUkgPrideLinkIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.peopleUkgPrideLink));
+  }
+
+  async doubleClickOutEqualPresentsSignalT(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT));
+  }
+
+  async longPressOutEqualPresentsSignalT(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT));
+  }
+
+  async expectOutEqualPresentsSignalTHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), expected, timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), substring, timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), value, timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), timeoutMs);
+  }
+
+  async expectOutEqualPresentsSignalTCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT), count, timeoutMs);
+  }
+
+  async scrollOutEqualPresentsSignalTIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalT));
   }
 
   async clickOutEqualPresentsSignalTVirtualZoom(): Promise<void> {
@@ -7120,6 +7951,274 @@ export class UkgcommonsPage {
 
   async scrollOutEqualPresentsSignalTVirtualZoomIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.outEqualPresentsSignalTVirtualZoom));
+  }
+
+  async doubleClickAskMeAnythingAboutAskMeAnythingAboutAiOpti(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti));
+  }
+
+  async longPressAskMeAnythingAboutAskMeAnythingAboutAiOpti(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti));
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), expected, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), substring, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), value, timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), timeoutMs);
+  }
+
+  async expectAskMeAnythingAboutAskMeAnythingAboutAiOptiCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti), count, timeoutMs);
+  }
+
+  async scrollAskMeAnythingAboutAskMeAnythingAboutAiOptiIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.askMeAnythingAboutAskMeAnythingAboutAiOpti));
+  }
+
+  async doubleClickSpillinTheTeaCoffeeChat(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat));
+  }
+
+  async longPressSpillinTheTeaCoffeeChat(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat));
+  }
+
+  async expectSpillinTheTeaCoffeeChatHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), expected, timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), substring, timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), value, timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat), count, timeoutMs);
+  }
+
+  async scrollSpillinTheTeaCoffeeChatIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChat));
+  }
+
+  async clickSpillinTheTeaCoffeeChatVirtualTeams(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams));
+  }
+
+  async doubleClickSpillinTheTeaCoffeeChatVirtualTeams(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams));
+  }
+
+  async longPressSpillinTheTeaCoffeeChatVirtualTeams(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams));
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), expected, timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), substring, timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), value, timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), timeoutMs);
+  }
+
+  async expectSpillinTheTeaCoffeeChatVirtualTeamsCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams), count, timeoutMs);
+  }
+
+  async scrollSpillinTheTeaCoffeeChatVirtualTeamsIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.spillinTheTeaCoffeeChatVirtualTeams));
+  }
+
+  async doubleClickUkgRiseUkgFireUpRise(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise));
+  }
+
+  async longPressUkgRiseUkgFireUpRise(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise));
+  }
+
+  async expectUkgRiseUkgFireUpRiseHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), expected, timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), substring, timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), value, timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise), count, timeoutMs);
+  }
+
+  async scrollUkgRiseUkgFireUpRiseIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRise));
+  }
+
+  async clickUkgRiseUkgFireUpRiseHybridZoomWebinar(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar));
+  }
+
+  async doubleClickUkgRiseUkgFireUpRiseHybridZoomWebinar(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar));
+  }
+
+  async longPressUkgRiseUkgFireUpRiseHybridZoomWebinar(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar));
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), expected, timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), substring, timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), value, timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), timeoutMs);
+  }
+
+  async expectUkgRiseUkgFireUpRiseHybridZoomWebinarCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar), count, timeoutMs);
+  }
+
+  async scrollUkgRiseUkgFireUpRiseHybridZoomWebinarIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.ukgRiseUkgFireUpRiseHybridZoomWebinar));
   }
 
   async doubleClickUpcomingMeetings(): Promise<void> {
@@ -7918,58 +9017,6 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport));
   }
 
-  async doubleClickGetTechnicalSupport2(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2));
-  }
-
-  async longPressGetTechnicalSupport2(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2));
-  }
-
-  async expectGetTechnicalSupport2Hidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Text(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), expected, timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), substring, timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Value(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), value, timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Enabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Disabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Checked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Unchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Focused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), timeoutMs);
-  }
-
-  async expectGetTechnicalSupport2Count(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2), count, timeoutMs);
-  }
-
-  async scrollGetTechnicalSupport2IntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.getTechnicalSupport2));
-  }
-
   async doubleClickViewHolidayCalendar(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar));
   }
@@ -8020,58 +9067,6 @@ export class UkgcommonsPage {
 
   async scrollViewHolidayCalendarIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar));
-  }
-
-  async doubleClickViewHolidayCalendar2(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2));
-  }
-
-  async longPressViewHolidayCalendar2(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2));
-  }
-
-  async expectViewHolidayCalendar2Hidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Text(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), expected, timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), substring, timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Value(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), value, timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Enabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Disabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Checked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Unchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Focused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), timeoutMs);
-  }
-
-  async expectViewHolidayCalendar2Count(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2), count, timeoutMs);
-  }
-
-  async scrollViewHolidayCalendar2IntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewHolidayCalendar2));
   }
 
   async doubleClickViewPolicies(): Promise<void> {
@@ -8126,58 +9121,6 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies));
   }
 
-  async doubleClickViewPolicies2(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies2));
-  }
-
-  async longPressViewPolicies2(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies2));
-  }
-
-  async expectViewPolicies2Hidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs);
-  }
-
-  async expectViewPolicies2Text(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), expected, timeoutMs);
-  }
-
-  async expectViewPolicies2ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), substring, timeoutMs);
-  }
-
-  async expectViewPolicies2Value(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), value, timeoutMs);
-  }
-
-  async expectViewPolicies2Enabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs);
-  }
-
-  async expectViewPolicies2Disabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs);
-  }
-
-  async expectViewPolicies2Checked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs);
-  }
-
-  async expectViewPolicies2Unchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs);
-  }
-
-  async expectViewPolicies2Focused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), timeoutMs);
-  }
-
-  async expectViewPolicies2Count(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.viewPolicies2), count, timeoutMs);
-  }
-
-  async scrollViewPolicies2IntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewPolicies2));
-  }
-
   async doubleClickManageExpenses(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses));
   }
@@ -8228,58 +9171,6 @@ export class UkgcommonsPage {
 
   async scrollManageExpensesIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses));
-  }
-
-  async doubleClickManageExpenses2(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses2));
-  }
-
-  async longPressManageExpenses2(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses2));
-  }
-
-  async expectManageExpenses2Hidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs);
-  }
-
-  async expectManageExpenses2Text(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), expected, timeoutMs);
-  }
-
-  async expectManageExpenses2ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), substring, timeoutMs);
-  }
-
-  async expectManageExpenses2Value(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), value, timeoutMs);
-  }
-
-  async expectManageExpenses2Enabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs);
-  }
-
-  async expectManageExpenses2Disabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs);
-  }
-
-  async expectManageExpenses2Checked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs);
-  }
-
-  async expectManageExpenses2Unchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs);
-  }
-
-  async expectManageExpenses2Focused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), timeoutMs);
-  }
-
-  async expectManageExpenses2Count(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.manageExpenses2), count, timeoutMs);
-  }
-
-  async scrollManageExpenses2IntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.manageExpenses2));
   }
 
   async doubleClickMicrosoftTodoTitle(): Promise<void> {
@@ -8844,370 +9735,6 @@ export class UkgcommonsPage {
 
   async scrollProductManagerHcmIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcm));
-  }
-
-  async doubleClickProductManagerHcmProductManagerHcmSolution(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution));
-  }
-
-  async longPressProductManagerHcmProductManagerHcmSolution(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution));
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), expected, timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), substring, timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), value, timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), timeoutMs);
-  }
-
-  async expectProductManagerHcmProductManagerHcmSolutionCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution), count, timeoutMs);
-  }
-
-  async scrollProductManagerHcmProductManagerHcmSolutionIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagerHcmProductManagerHcmSolution));
-  }
-
-  async doubleClickProductManagement(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement));
-  }
-
-  async longPressProductManagement(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement));
-  }
-
-  async expectProductManagementHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs);
-  }
-
-  async expectProductManagementText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.productManagement), expected, timeoutMs);
-  }
-
-  async expectProductManagementContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.productManagement), substring, timeoutMs);
-  }
-
-  async expectProductManagementValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.productManagement), value, timeoutMs);
-  }
-
-  async expectProductManagementEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs);
-  }
-
-  async expectProductManagementDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs);
-  }
-
-  async expectProductManagementChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs);
-  }
-
-  async expectProductManagementUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs);
-  }
-
-  async expectProductManagementFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.productManagement), timeoutMs);
-  }
-
-  async expectProductManagementCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.productManagement), count, timeoutMs);
-  }
-
-  async scrollProductManagementIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement));
-  }
-
-  async doubleClickProductManagement2(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement2));
-  }
-
-  async longPressProductManagement2(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement2));
-  }
-
-  async expectProductManagement2Hidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs);
-  }
-
-  async expectProductManagement2Text(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.productManagement2), expected, timeoutMs);
-  }
-
-  async expectProductManagement2ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.productManagement2), substring, timeoutMs);
-  }
-
-  async expectProductManagement2Value(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.productManagement2), value, timeoutMs);
-  }
-
-  async expectProductManagement2Enabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs);
-  }
-
-  async expectProductManagement2Disabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs);
-  }
-
-  async expectProductManagement2Checked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs);
-  }
-
-  async expectProductManagement2Unchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs);
-  }
-
-  async expectProductManagement2Focused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.productManagement2), timeoutMs);
-  }
-
-  async expectProductManagement2Count(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.productManagement2), count, timeoutMs);
-  }
-
-  async scrollProductManagement2IntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.productManagement2));
-  }
-
-  async doubleClickLondonUkDublinLondonUkDublinIreland(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland));
-  }
-
-  async longPressLondonUkDublinLondonUkDublinIreland(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland));
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), expected, timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), substring, timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), value, timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), timeoutMs);
-  }
-
-  async expectLondonUkDublinLondonUkDublinIrelandCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland), count, timeoutMs);
-  }
-
-  async scrollLondonUkDublinLondonUkDublinIrelandIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.londonUkDublinLondonUkDublinIreland));
-  }
-
-  async doubleClickRemotePostedAMonth(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth));
-  }
-
-  async longPressRemotePostedAMonth(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth));
-  }
-
-  async expectRemotePostedAMonthHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs);
-  }
-
-  async expectRemotePostedAMonthText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), expected, timeoutMs);
-  }
-
-  async expectRemotePostedAMonthContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), substring, timeoutMs);
-  }
-
-  async expectRemotePostedAMonthValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), value, timeoutMs);
-  }
-
-  async expectRemotePostedAMonthEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs);
-  }
-
-  async expectRemotePostedAMonthDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs);
-  }
-
-  async expectRemotePostedAMonthChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs);
-  }
-
-  async expectRemotePostedAMonthUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs);
-  }
-
-  async expectRemotePostedAMonthFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), timeoutMs);
-  }
-
-  async expectRemotePostedAMonthCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth), count, timeoutMs);
-  }
-
-  async scrollRemotePostedAMonthIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.remotePostedAMonth));
-  }
-
-  async doubleClickRemote2(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.remote2));
-  }
-
-  async longPressRemote2(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.remote2));
-  }
-
-  async expectRemote2Hidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs);
-  }
-
-  async expectRemote2Text(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.remote2), expected, timeoutMs);
-  }
-
-  async expectRemote2ContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.remote2), substring, timeoutMs);
-  }
-
-  async expectRemote2Value(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.remote2), value, timeoutMs);
-  }
-
-  async expectRemote2Enabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs);
-  }
-
-  async expectRemote2Disabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs);
-  }
-
-  async expectRemote2Checked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs);
-  }
-
-  async expectRemote2Unchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs);
-  }
-
-  async expectRemote2Focused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.remote2), timeoutMs);
-  }
-
-  async expectRemote2Count(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.remote2), count, timeoutMs);
-  }
-
-  async scrollRemote2IntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.remote2));
-  }
-
-  async doubleClickPostedAMonthAgo(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo));
-  }
-
-  async longPressPostedAMonthAgo(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo));
-  }
-
-  async expectPostedAMonthAgoHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs);
-  }
-
-  async expectPostedAMonthAgoText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), expected, timeoutMs);
-  }
-
-  async expectPostedAMonthAgoContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), substring, timeoutMs);
-  }
-
-  async expectPostedAMonthAgoValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), value, timeoutMs);
-  }
-
-  async expectPostedAMonthAgoEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs);
-  }
-
-  async expectPostedAMonthAgoDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs);
-  }
-
-  async expectPostedAMonthAgoChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs);
-  }
-
-  async expectPostedAMonthAgoUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs);
-  }
-
-  async expectPostedAMonthAgoFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), timeoutMs);
-  }
-
-  async expectPostedAMonthAgoCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo), count, timeoutMs);
-  }
-
-  async scrollPostedAMonthAgoIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.postedAMonthAgo));
   }
 
   async longPressQaAutomationLead(): Promise<void> {
@@ -10274,6 +10801,118 @@ export class UkgcommonsPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.jm));
   }
 
+  async clickJagadeeshM(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshM));
+  }
+
+  async doubleClickJagadeeshM(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshM));
+  }
+
+  async longPressJagadeeshM(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshM));
+  }
+
+  async expectJagadeeshMHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs);
+  }
+
+  async expectJagadeeshMText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), expected, timeoutMs);
+  }
+
+  async expectJagadeeshMContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), substring, timeoutMs);
+  }
+
+  async expectJagadeeshMValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), value, timeoutMs);
+  }
+
+  async expectJagadeeshMEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs);
+  }
+
+  async expectJagadeeshMDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs);
+  }
+
+  async expectJagadeeshMChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs);
+  }
+
+  async expectJagadeeshMUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs);
+  }
+
+  async expectJagadeeshMFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), timeoutMs);
+  }
+
+  async expectJagadeeshMCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.jagadeeshM), count, timeoutMs);
+  }
+
+  async scrollJagadeeshMIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshM));
+  }
+
+  async clickJagadeeshMUkgCom(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom));
+  }
+
+  async doubleClickJagadeeshMUkgCom(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom));
+  }
+
+  async longPressJagadeeshMUkgCom(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom));
+  }
+
+  async expectJagadeeshMUkgComHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), expected, timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), substring, timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), value, timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), timeoutMs);
+  }
+
+  async expectJagadeeshMUkgComCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom), count, timeoutMs);
+  }
+
+  async scrollJagadeeshMUkgComIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.jagadeeshMUkgCom));
+  }
+
   async doubleClickViewAccount(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.viewAccount));
   }
@@ -10480,6 +11119,58 @@ export class UkgcommonsPage {
 
   async scrollGridIconIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.gridIcon));
+  }
+
+  async doubleClickCustomizeHomePageLayout(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout));
+  }
+
+  async longPressCustomizeHomePageLayout(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout));
+  }
+
+  async expectCustomizeHomePageLayoutHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), expected, timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), substring, timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), value, timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), timeoutMs);
+  }
+
+  async expectCustomizeHomePageLayoutCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout), count, timeoutMs);
+  }
+
+  async scrollCustomizeHomePageLayoutIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, UkgcommonsPage.L.customizeHomePageLayout));
   }
 
 }

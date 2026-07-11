@@ -44,11 +44,7 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
   private static readonly L = {
     skipToMainContent: { strategy: 'css' as const, value: '#sp-skipToContent', actionKind: 'link' as const },
     appLauncher: { strategy: 'css' as const, value: '#O365_MainLink_NavMenu[title="App launcher"]', actionKind: 'button' as const },
-    ukg: { strategy: 'css' as const, value: '#O365_MainLink_TenantLogo[title="UKG"]', actionKind: 'link' as const },
-    goToSharePoint: { strategy: 'css' as const, value: '#O365_AppName[title="SharePoint"]', actionKind: 'link' as const },
     search: { strategy: 'placeholder' as const, value: 'Search', actionKind: 'textbox' as const },
-    settings: { strategy: 'css' as const, value: '#O365_MainLink_Settings[title="Settings"]', actionKind: 'button' as const },
-    help: { strategy: 'css' as const, value: '#O365_MainLink_Help[title="Help"]', actionKind: 'button' as const },
     accountManagerForJagadeesh: { strategy: 'css' as const, value: '#O365_MainLink_Me[title="Account manager for Jagadeesh M"]', actionKind: 'button' as const },
     sharePointStartPage: { strategy: 'role' as const, value: 'SharePoint start page', role: 'button', actionKind: 'link' as const },
     mySites: { strategy: 'css' as const, value: '#sp-appBar-link-sites', actionKind: 'link' as const },
@@ -58,20 +54,20 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     connections: { strategy: 'css' as const, value: '#sp-appBar-link-vivaConnections', actionKind: 'link' as const },
     create: { strategy: 'css' as const, value: '#sp-appBar-link-create', actionKind: 'link' as const },
     peopleHubSite: { strategy: 'role' as const, value: 'People hub site', role: 'link', actionKind: 'link' as const },
-    ukgCommonsTopSites: { strategy: 'role' as const, value: 'UKG Commons top sites', role: 'link', actionKind: 'link' as const },
-    ukgCommonsTopSitesButton: { strategy: 'role' as const, value: 'UKG Commons top sites submenu', role: 'button', actionKind: 'button' as const },
-    belongingAndImpact: { strategy: 'role' as const, value: 'Belonging and Impact', role: 'link', actionKind: 'link' as const },
-    benefits: { strategy: 'role' as const, value: 'Benefits', role: 'link', actionKind: 'link' as const },
-    career: { strategy: 'role' as const, value: 'Career', role: 'link', actionKind: 'link' as const },
-    employeeExperience: { strategy: 'role' as const, value: 'Employee Experience', role: 'link', actionKind: 'link' as const },
-    learningAndDevelopment: { strategy: 'role' as const, value: 'Learning and Development', role: 'link', actionKind: 'link' as const },
-    payAndTimekeeping: { strategy: 'role' as const, value: 'Pay and Timekeeping', role: 'link', actionKind: 'link' as const },
+    ukgCommonsTopSites: { strategy: 'role' as const, value: 'UKG Commons top sites', role: 'link', scope: '[role="listitem"]', scopeText: 'UKG Commons top sites', scopeIndex: 0, actionKind: 'link' as const },
+    ukgCommonsTopSitesButton: { strategy: 'role' as const, value: 'UKG Commons top sites submenu', role: 'button', scope: '[role="listitem"]', scopeText: 'UKG Commons top sites', scopeIndex: 0, actionKind: 'button' as const },
+    belongingAndImpact: { strategy: 'role' as const, value: 'Belonging and Impact', role: 'link', scope: '[role="listitem"]', scopeText: 'Belonging and Impact', scopeIndex: 1, actionKind: 'link' as const },
+    benefits: { strategy: 'role' as const, value: 'Benefits', role: 'link', scope: '[role="listitem"]', scopeText: 'Benefits', scopeIndex: 2, actionKind: 'link' as const },
+    career: { strategy: 'role' as const, value: 'Career', role: 'link', scope: '[role="listitem"]', scopeText: 'Career', scopeIndex: 3, actionKind: 'link' as const },
+    employeeExperience: { strategy: 'role' as const, value: 'Employee Experience', role: 'link', scope: '[role="listitem"]', scopeText: 'Employee Experience', scopeIndex: 4, actionKind: 'link' as const },
+    learningAndDevelopment: { strategy: 'role' as const, value: 'Learning and Development', role: 'link', scope: '[role="listitem"]', scopeText: 'Learning and Development', scopeIndex: 5, actionKind: 'link' as const },
+    payAndTimekeeping: { strategy: 'role' as const, value: 'Pay and Timekeeping', role: 'link', scope: '[role="listitem"]', scopeText: 'Pay and Timekeeping', scopeIndex: 6, actionKind: 'link' as const },
     moreNavigationOptions: { strategy: 'css' as const, value: '#HorizontalNav2overflow[title="More navigation options"]', actionKind: 'button' as const },
     learningAndDevelopmentHome: { strategy: 'role' as const, value: 'Learning and Development home', role: 'link', actionKind: 'link' as const },
-    home: { strategy: 'role' as const, value: 'Home', role: 'link', actionKind: 'link' as const },
-    learningPlatforms: { strategy: 'role' as const, value: 'Learning Platforms', role: 'link', actionKind: 'link' as const },
-    careerDevelopment: { strategy: 'role' as const, value: 'Career Development', role: 'link', actionKind: 'link' as const },
-    leaderDevelopment: { strategy: 'role' as const, value: 'Leader Development', role: 'link', actionKind: 'link' as const },
+    home: { strategy: 'role' as const, value: 'Home', role: 'link', scope: '[role="listitem"]', scopeText: 'Home', scopeIndex: 0, actionKind: 'link' as const },
+    learningPlatforms: { strategy: 'role' as const, value: 'Learning Platforms', role: 'link', scope: '[role="listitem"]', scopeText: 'Learning Platforms', scopeIndex: 1, actionKind: 'link' as const },
+    careerDevelopment: { strategy: 'role' as const, value: 'Career Development', role: 'link', scope: '[role="listitem"]', scopeText: 'Career Development', scopeIndex: 2, actionKind: 'link' as const },
+    leaderDevelopment: { strategy: 'role' as const, value: 'Leader Development', role: 'link', scope: '[role="listitem"]', scopeText: 'Leader Development', scopeIndex: 3, actionKind: 'link' as const },
     learningByFunction: { strategy: 'role' as const, value: 'Learning by Function', role: 'button', scope: '[role="listitem"]', scopeText: 'Learning by Function', scopeIndex: 4, actionKind: 'button' as const },
     aboutUkg: { strategy: 'role' as const, value: 'About UKG', role: 'button', scope: '[role="listitem"]', scopeText: 'About UKG', scopeIndex: 5, actionKind: 'button' as const },
     pageAuthorBylineStacy: { strategy: 'role' as const, value: 'Page author byline. Stacy Cutrono Dir. Learning Program Management. Press Enter to open details for this person. ', role: 'button', actionKind: 'button' as const },
@@ -119,22 +115,6 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.appLauncher), timeoutMs, soft);
   }
 
-  async clickUkg(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg));
-  }
-
-  async expectUkgVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs, soft);
-  }
-
-  async clickGoToSharePoint(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint));
-  }
-
-  async expectGoToSharePointVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs, soft);
-  }
-
   async fillSearch(value: string): Promise<void> {
     await fillWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), value);
   }
@@ -149,30 +129,6 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
 
   async expectSearchVisible(timeoutMs = 30_000, soft = true): Promise<void> {
     await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs, soft);
-  }
-
-  async clickSettings(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings));
-  }
-
-  async doubleClickSettings(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings));
-  }
-
-  async expectSettingsVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs, soft);
-  }
-
-  async clickHelp(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help));
-  }
-
-  async doubleClickHelp(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help));
-  }
-
-  async expectHelpVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs, soft);
   }
 
   async clickAccountManagerForJagadeesh(): Promise<void> {
@@ -686,110 +642,6 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.appLauncher));
   }
 
-  async doubleClickUkg(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg));
-  }
-
-  async longPressUkg(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg));
-  }
-
-  async expectUkgHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs);
-  }
-
-  async expectUkgText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), expected, timeoutMs);
-  }
-
-  async expectUkgContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), substring, timeoutMs);
-  }
-
-  async expectUkgValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), value, timeoutMs);
-  }
-
-  async expectUkgEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs);
-  }
-
-  async expectUkgDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs);
-  }
-
-  async expectUkgChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs);
-  }
-
-  async expectUkgUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs);
-  }
-
-  async expectUkgFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), timeoutMs);
-  }
-
-  async expectUkgCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg), count, timeoutMs);
-  }
-
-  async scrollUkgIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.ukg));
-  }
-
-  async doubleClickGoToSharePoint(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint));
-  }
-
-  async longPressGoToSharePoint(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint));
-  }
-
-  async expectGoToSharePointHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs);
-  }
-
-  async expectGoToSharePointText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), expected, timeoutMs);
-  }
-
-  async expectGoToSharePointContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), substring, timeoutMs);
-  }
-
-  async expectGoToSharePointValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), value, timeoutMs);
-  }
-
-  async expectGoToSharePointEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs);
-  }
-
-  async expectGoToSharePointDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs);
-  }
-
-  async expectGoToSharePointChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs);
-  }
-
-  async expectGoToSharePointUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs);
-  }
-
-  async expectGoToSharePointFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs);
-  }
-
-  async expectGoToSharePointCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), count, timeoutMs);
-  }
-
-  async scrollGoToSharePointIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint));
-  }
-
   async typeTextSearch(value: string): Promise<void> {
     await typeTextWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), value);
   }
@@ -836,102 +688,6 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
 
   async scrollSearchIntoView(): Promise<void> {
     await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search));
-  }
-
-  async longPressSettings(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings));
-  }
-
-  async expectSettingsHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs);
-  }
-
-  async expectSettingsText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), expected, timeoutMs);
-  }
-
-  async expectSettingsContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), substring, timeoutMs);
-  }
-
-  async expectSettingsValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), value, timeoutMs);
-  }
-
-  async expectSettingsEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs);
-  }
-
-  async expectSettingsDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs);
-  }
-
-  async expectSettingsChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs);
-  }
-
-  async expectSettingsUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs);
-  }
-
-  async expectSettingsFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), timeoutMs);
-  }
-
-  async expectSettingsCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings), count, timeoutMs);
-  }
-
-  async scrollSettingsIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.settings));
-  }
-
-  async longPressHelp(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help));
-  }
-
-  async expectHelpHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs);
-  }
-
-  async expectHelpText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), expected, timeoutMs);
-  }
-
-  async expectHelpContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), substring, timeoutMs);
-  }
-
-  async expectHelpValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), value, timeoutMs);
-  }
-
-  async expectHelpEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs);
-  }
-
-  async expectHelpDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs);
-  }
-
-  async expectHelpChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs);
-  }
-
-  async expectHelpUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs);
-  }
-
-  async expectHelpFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), timeoutMs);
-  }
-
-  async expectHelpCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help), count, timeoutMs);
-  }
-
-  async scrollHelpIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.help));
   }
 
   async longPressAccountManagerForJagadeesh(): Promise<void> {

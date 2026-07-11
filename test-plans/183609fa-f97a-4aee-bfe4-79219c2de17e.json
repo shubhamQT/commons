@@ -1,0 +1,429 @@
+{
+  "id": "183609fa-f97a-4aee-bfe4-79219c2de17e",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "model": "gpt-5",
+  "createdAt": "2026-07-11T17:57:07.582Z",
+  "plan": {
+    "version": 1,
+    "suiteName": "Save News Article Card - E2E",
+    "cases": [
+      {
+        "id": "icons-visible-on-featured-and-latest",
+        "title": "Bookmark icons are visible on all article cards in Featured and Latest sections",
+        "priority": "P2",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "waitForVisible",
+            "targetDescription": "Featured News section is visible",
+            "locatorHint": "section[aria-label='Featured News']"
+          },
+          {
+            "id": "s3",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Featured News: bookmark icons present",
+            "locatorHint": "section[aria-label='Featured News'] [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "Latest News section is visible",
+            "locatorHint": "section[aria-label='Latest News']"
+          },
+          {
+            "id": "s5",
+            "action": "assertCountGreaterThan",
+            "targetDescription": "Latest News: bookmark icons present",
+            "locatorHint": "section[aria-label='Latest News'] [data-testid='bookmark-toggle']"
+          }
+        ],
+        "tags": [
+          "@e2e",
+          "@regression"
+        ]
+      },
+      {
+        "id": "save-from-card-and-verify-in-saved-open-article",
+        "title": "Save an article from card, verify in My saved news, and open full article",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to target article card",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s3",
+            "action": "assertVisible",
+            "targetDescription": "Target article card is visible",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "Tap bookmark icon to save",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s5",
+            "action": "assertContainsText",
+            "targetDescription": "Bookmark toggle indicates Saved",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+            "assertion": "Saved"
+          },
+          {
+            "id": "s6",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "button[aria-label='Profile']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[role='menuitem'], a:has-text('My saved news')"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "My saved news page header",
+            "locatorHint": "h1:has-text('My saved news')"
+          },
+          {
+            "id": "s9",
+            "action": "assertVisible",
+            "targetDescription": "Saved item appears in list",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s10",
+            "action": "tap",
+            "targetDescription": "Open saved item to full article",
+            "locatorHint": "[data-testid='saved-news-list'] li a:has-text('Take the next step in your development at UKG')"
+          },
+          {
+            "id": "s11",
+            "action": "waitForVisible",
+            "targetDescription": "Article page title loads",
+            "locatorHint": "article h1"
+          },
+          {
+            "id": "s12",
+            "action": "assertContainsText",
+            "targetDescription": "Article page heading matches saved item",
+            "locatorHint": "article h1",
+            "assertion": "Take the next step in your development at UKG"
+          }
+        ],
+        "tags": [
+          "@e2e",
+          "@regression"
+        ]
+      },
+      {
+        "id": "saved-persists-after-reload",
+        "title": "Saved state persists after page reload and is listed in My saved news",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [
+          "Article 'Take the next step in your development at UKG' is already saved for the logged-in user"
+        ],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to target article card",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s3",
+            "action": "assertContainsText",
+            "targetDescription": "Bookmark toggle shows Saved before reload",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+            "assertion": "Saved"
+          },
+          {
+            "id": "s4",
+            "action": "openUrl",
+            "targetDescription": "Reload homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s5",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to target article card after reload",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s6",
+            "action": "assertContainsText",
+            "targetDescription": "Bookmark toggle still shows Saved after reload",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+            "assertion": "Saved"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "button[aria-label='Profile']"
+          },
+          {
+            "id": "s8",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[role='menuitem'], a:has-text('My saved news')"
+          },
+          {
+            "id": "s9",
+            "action": "waitForVisible",
+            "targetDescription": "My saved news page header",
+            "locatorHint": "h1:has-text('My saved news')"
+          },
+          {
+            "id": "s10",
+            "action": "assertVisible",
+            "targetDescription": "Saved item remains listed",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+          }
+        ],
+        "tags": [
+          "@e2e",
+          "@regression"
+        ]
+      },
+      {
+        "id": "unsave-from-saved-removes-immediately",
+        "title": "Unsaving from My saved news removes the item immediately",
+        "priority": "P0",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [
+          "Article 'Take the next step in your development at UKG' is already saved for the logged-in user"
+        ],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "button[aria-label='Profile']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[role='menuitem'], a:has-text('My saved news')"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "My saved news page header",
+            "locatorHint": "h1:has-text('My saved news')"
+          },
+          {
+            "id": "s5",
+            "action": "assertVisible",
+            "targetDescription": "Verify target saved item is present",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s6",
+            "action": "tap",
+            "targetDescription": "Unsave the item from Saved list",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s7",
+            "action": "wait",
+            "targetDescription": "Wait for list to update"
+          },
+          {
+            "id": "s8",
+            "action": "assertHidden",
+            "targetDescription": "Item is removed from Saved list immediately",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s9",
+            "action": "openUrl",
+            "targetDescription": "Return to homepage to verify unsaved state on card",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s10",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to target article card on homepage",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s11",
+            "action": "assertContainsText",
+            "targetDescription": "Bookmark toggle now shows Save",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+            "assertion": "Save"
+          }
+        ],
+        "tags": [
+          "@e2e",
+          "@regression"
+        ]
+      },
+      {
+        "id": "archived-or-deleted-article-removed-from-saved",
+        "title": "Archived/Deleted article disappears automatically from My saved news",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [
+          "Article 'Take the next step in your development at UKG' was previously saved by this user",
+          "The same article has been archived or deleted in the CMS prior to this test run"
+        ],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "button[aria-label='Profile']"
+          },
+          {
+            "id": "s3",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[role='menuitem'], a:has-text('My saved news')"
+          },
+          {
+            "id": "s4",
+            "action": "waitForVisible",
+            "targetDescription": "My saved news page header",
+            "locatorHint": "h1:has-text('My saved news')"
+          },
+          {
+            "id": "s5",
+            "action": "assertHidden",
+            "targetDescription": "Archived/deleted item no longer appears in Saved list",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+          }
+        ],
+        "tags": [
+          "@e2e",
+          "@regression"
+        ]
+      },
+      {
+        "id": "unsave-from-card-removes-from-saved",
+        "title": "Unsaving from article card removes it from My saved news",
+        "priority": "P1",
+        "platforms": [
+          "chrome"
+        ],
+        "preconditions": [
+          "Article 'Take the next step in your development at UKG' is already saved for the logged-in user"
+        ],
+        "steps": [
+          {
+            "id": "s1",
+            "action": "openUrl",
+            "targetDescription": "Open Commons QA homepage",
+            "value": "https://commons-qa.util.ukg.com/"
+          },
+          {
+            "id": "s2",
+            "action": "scrollIntoView",
+            "targetDescription": "Scroll to target article card",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG'))"
+          },
+          {
+            "id": "s3",
+            "action": "assertContainsText",
+            "targetDescription": "Bookmark toggle shows Saved before unsaving",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+            "assertion": "Saved"
+          },
+          {
+            "id": "s4",
+            "action": "tap",
+            "targetDescription": "Tap bookmark toggle to unsave on card",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']"
+          },
+          {
+            "id": "s5",
+            "action": "assertContainsText",
+            "targetDescription": "Bookmark toggle now shows Save",
+            "locatorHint": "article:has(h3:has-text('Take the next step in your development at UKG')) [data-testid='bookmark-toggle']",
+            "assertion": "Save"
+          },
+          {
+            "id": "s6",
+            "action": "tap",
+            "targetDescription": "Open profile menu",
+            "locatorHint": "button[aria-label='Profile']"
+          },
+          {
+            "id": "s7",
+            "action": "tap",
+            "targetDescription": "Go to My saved news",
+            "locatorHint": "[role='menuitem'], a:has-text('My saved news')"
+          },
+          {
+            "id": "s8",
+            "action": "waitForVisible",
+            "targetDescription": "My saved news page header",
+            "locatorHint": "h1:has-text('My saved news')"
+          },
+          {
+            "id": "s9",
+            "action": "assertHidden",
+            "targetDescription": "Unsaved item is removed from Saved list",
+            "locatorHint": "[data-testid='saved-news-list'] li:has(a:has-text('Take the next step in your development at UKG'))"
+          }
+        ],
+        "tags": [
+          "@e2e",
+          "@regression"
+        ]
+      }
+    ]
+  }
+}
