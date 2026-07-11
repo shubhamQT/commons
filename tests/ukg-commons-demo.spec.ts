@@ -7,7 +7,7 @@ test("Access 'My saved news' from profile and see saved article listed", { tag: 
   });
 
   await test.step('Assert visible — Wait for news feed', async () => {
-    await ukgcommonsPage.expectLatestNewsTitleVisible();
+    await ukgcommonsPage.expectSearchNewsSitesOrVisible();
   });
 
   await test.step('Scroll — Scroll to the target article card', async () => {
