@@ -46,7 +46,7 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     appLauncher: { strategy: 'css' as const, value: '#O365_MainLink_NavMenu[title="App launcher"]', actionKind: 'button' as const },
     ukg: { strategy: 'css' as const, value: '#O365_MainLink_TenantLogo[title="UKG"]', actionKind: 'link' as const },
     goToSharePoint: { strategy: 'css' as const, value: '#O365_AppName[title="SharePoint"]', actionKind: 'link' as const },
-    searchBoxSuggestionsAppear: { strategy: 'role' as const, value: 'Search box. Suggestions appear as you type', role: 'combobox', actionKind: 'textbox' as const },
+    search: { strategy: 'placeholder' as const, value: 'Search', actionKind: 'textbox' as const },
     settings: { strategy: 'css' as const, value: '#O365_MainLink_Settings[title="Settings"]', actionKind: 'button' as const },
     help: { strategy: 'css' as const, value: '#O365_MainLink_Help[title="Help"]', actionKind: 'button' as const },
     accountManagerForJagadeesh: { strategy: 'css' as const, value: '#O365_MainLink_Me[title="Account manager for Jagadeesh M"]', actionKind: 'button' as const },
@@ -71,15 +71,11 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     home: { strategy: 'role' as const, value: 'Home', role: 'link', actionKind: 'link' as const },
     learningPlatforms: { strategy: 'role' as const, value: 'Learning Platforms', role: 'link', actionKind: 'link' as const },
     careerDevelopment: { strategy: 'role' as const, value: 'Career Development', role: 'link', actionKind: 'link' as const },
-    careerDevelopmentSubmenu: { strategy: 'role' as const, value: 'Career Development submenu', role: 'button', actionKind: 'button' as const },
     leaderDevelopment: { strategy: 'role' as const, value: 'Leader Development', role: 'link', actionKind: 'link' as const },
-    leaderDevelopmentSubmenu: { strategy: 'role' as const, value: 'Leader Development submenu', role: 'button', actionKind: 'button' as const },
-    moreNavigationOptionsButton: { strategy: 'css' as const, value: '#HorizontalNav0overflow[title="More navigation options"]', actionKind: 'button' as const },
-    notFollowing: { strategy: 'role' as const, value: 'Not following', role: 'button', actionKind: 'button' as const },
-    share: { strategy: 'css' as const, value: '#showOverlayText[name="Share"]', actionKind: 'button' as const },
-    more: { strategy: 'role' as const, value: 'More', role: 'button', actionKind: 'button' as const },
+    learningByFunction: { strategy: 'role' as const, value: 'Learning by Function', role: 'button', scope: '[role="listitem"]', scopeText: 'Learning by Function', scopeIndex: 4, actionKind: 'button' as const },
+    aboutUkg: { strategy: 'role' as const, value: 'About UKG', role: 'button', scope: '[role="listitem"]', scopeText: 'About UKG', scopeIndex: 5, actionKind: 'button' as const },
     pageAuthorBylineStacy: { strategy: 'role' as const, value: 'Page author byline. Stacy Cutrono Dir. Learning Program Management. Press Enter to open details for this person. ', role: 'button', actionKind: 'button' as const },
-    opensCardForStacy: { strategy: 'role' as const, value: 'Opens card for Stacy Cutrono', role: 'button', actionKind: 'button' as const },
+    opensProfileCardFor: { strategy: 'role' as const, value: 'Opens Profile Card for Stacy Cutrono', role: 'button', actionKind: 'button' as const },
     careerDevelopmentFocusYourDevelopmentWhereItMattersMost: { strategy: 'css' as const, value: '#career-development-focus-your-development-where-it-matters-most', role: 'heading', level: 3, actionKind: 'text' as const },
     startWithWhatMatters: { strategy: 'text' as const, value: 'Start with what matters most to you:', actionKind: 'text' as const },
     clarityUnderstandYour: { strategy: 'text' as const, value: 'Clarity – Understand your strengths, gaps, and', actionKind: 'text' as const },
@@ -139,20 +135,20 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint), timeoutMs, soft);
   }
 
-  async fillSearchBoxSuggestionsAppear(value: string): Promise<void> {
-    await fillWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), value);
+  async fillSearch(value: string): Promise<void> {
+    await fillWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), value);
   }
 
-  async clearSearchBoxSuggestionsAppear(): Promise<void> {
-    await clearWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear));
+  async clearSearch(): Promise<void> {
+    await clearWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search));
   }
 
-  async getSearchBoxSuggestionsAppearValue(): Promise<string> {
-    return getTextWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear));
+  async getSearchValue(): Promise<string> {
+    return getTextWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search));
   }
 
-  async expectSearchBoxSuggestionsAppearVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs, soft);
+  async expectSearchVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs, soft);
   }
 
   async clickSettings(): Promise<void> {
@@ -367,18 +363,6 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopment), timeoutMs, soft);
   }
 
-  async clickCareerDevelopmentSubmenu(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu));
-  }
-
-  async doubleClickCareerDevelopmentSubmenu(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu));
-  }
-
-  async expectCareerDevelopmentSubmenuVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs, soft);
-  }
-
   async clickLeaderDevelopment(): Promise<void> {
     await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopment));
   }
@@ -387,64 +371,28 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopment), timeoutMs, soft);
   }
 
-  async clickLeaderDevelopmentSubmenu(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu));
+  async clickLearningByFunction(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction));
   }
 
-  async doubleClickLeaderDevelopmentSubmenu(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu));
+  async doubleClickLearningByFunction(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction));
   }
 
-  async expectLeaderDevelopmentSubmenuVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs, soft);
+  async expectLearningByFunctionVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs, soft);
   }
 
-  async clickMoreNavigationOptionsButton(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton));
+  async clickAboutUkg(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg));
   }
 
-  async doubleClickMoreNavigationOptionsButton(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton));
+  async doubleClickAboutUkg(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg));
   }
 
-  async expectMoreNavigationOptionsButtonVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs, soft);
-  }
-
-  async clickNotFollowing(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing));
-  }
-
-  async doubleClickNotFollowing(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing));
-  }
-
-  async expectNotFollowingVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs, soft);
-  }
-
-  async clickShare(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share));
-  }
-
-  async doubleClickShare(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share));
-  }
-
-  async expectShareVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs, soft);
-  }
-
-  async clickMore(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more));
-  }
-
-  async doubleClickMore(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more));
-  }
-
-  async expectMoreVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs, soft);
+  async expectAboutUkgVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs, soft);
   }
 
   async clickPageAuthorBylineStacy(): Promise<void> {
@@ -459,16 +407,16 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.pageAuthorBylineStacy), timeoutMs, soft);
   }
 
-  async clickOpensCardForStacy(): Promise<void> {
-    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy));
+  async clickOpensProfileCardFor(): Promise<void> {
+    await clickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor));
   }
 
-  async doubleClickOpensCardForStacy(): Promise<void> {
-    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy));
+  async doubleClickOpensProfileCardFor(): Promise<void> {
+    await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor));
   }
 
-  async expectOpensCardForStacyVisible(timeoutMs = 30_000, soft = true): Promise<void> {
-    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs, soft);
+  async expectOpensProfileCardForVisible(timeoutMs = 30_000, soft = true): Promise<void> {
+    await expectVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs, soft);
   }
 
   async getInnerTextCareerDevelopmentFocusYourDevelopmentWhereItMattersMost(): Promise<string> {
@@ -842,52 +790,52 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.goToSharePoint));
   }
 
-  async typeTextSearchBoxSuggestionsAppear(value: string): Promise<void> {
-    await typeTextWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), value);
+  async typeTextSearch(value: string): Promise<void> {
+    await typeTextWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), value);
   }
 
-  async expectSearchBoxSuggestionsAppearHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs);
+  async expectSearchHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), expected, timeoutMs);
+  async expectSearchText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), expected, timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), substring, timeoutMs);
+  async expectSearchContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), substring, timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), value, timeoutMs);
+  async expectSearchValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), value, timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs);
+  async expectSearchEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs);
+  async expectSearchDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs);
+  async expectSearchChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs);
+  async expectSearchUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), timeoutMs);
+  async expectSearchFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), timeoutMs);
   }
 
-  async expectSearchBoxSuggestionsAppearCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear), count, timeoutMs);
+  async expectSearchCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search), count, timeoutMs);
   }
 
-  async scrollSearchBoxSuggestionsAppearIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.searchBoxSuggestionsAppear));
+  async scrollSearchIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.search));
   }
 
   async longPressSettings(): Promise<void> {
@@ -2118,54 +2066,6 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopment));
   }
 
-  async longPressCareerDevelopmentSubmenu(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu));
-  }
-
-  async expectCareerDevelopmentSubmenuHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), expected, timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), substring, timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), value, timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), timeoutMs);
-  }
-
-  async expectCareerDevelopmentSubmenuCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu), count, timeoutMs);
-  }
-
-  async scrollCareerDevelopmentSubmenuIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.careerDevelopmentSubmenu));
-  }
-
   async doubleClickLeaderDevelopment(): Promise<void> {
     await doubleClickWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopment));
   }
@@ -2218,244 +2118,100 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopment));
   }
 
-  async longPressLeaderDevelopmentSubmenu(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu));
+  async longPressLearningByFunction(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction));
   }
 
-  async expectLeaderDevelopmentSubmenuHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs);
+  async expectLearningByFunctionHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), expected, timeoutMs);
+  async expectLearningByFunctionText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), expected, timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), substring, timeoutMs);
+  async expectLearningByFunctionContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), substring, timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), value, timeoutMs);
+  async expectLearningByFunctionValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), value, timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs);
+  async expectLearningByFunctionEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs);
+  async expectLearningByFunctionDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs);
+  async expectLearningByFunctionChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs);
+  async expectLearningByFunctionUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), timeoutMs);
+  async expectLearningByFunctionFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), timeoutMs);
   }
 
-  async expectLeaderDevelopmentSubmenuCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu), count, timeoutMs);
+  async expectLearningByFunctionCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction), count, timeoutMs);
   }
 
-  async scrollLeaderDevelopmentSubmenuIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.leaderDevelopmentSubmenu));
+  async scrollLearningByFunctionIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.learningByFunction));
   }
 
-  async longPressMoreNavigationOptionsButton(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton));
+  async longPressAboutUkg(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg));
   }
 
-  async expectMoreNavigationOptionsButtonHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs);
+  async expectAboutUkgHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), expected, timeoutMs);
+  async expectAboutUkgText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), expected, timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), substring, timeoutMs);
+  async expectAboutUkgContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), substring, timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), value, timeoutMs);
+  async expectAboutUkgValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), value, timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs);
+  async expectAboutUkgEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs);
+  async expectAboutUkgDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs);
+  async expectAboutUkgChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs);
+  async expectAboutUkgUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), timeoutMs);
+  async expectAboutUkgFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), timeoutMs);
   }
 
-  async expectMoreNavigationOptionsButtonCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton), count, timeoutMs);
+  async expectAboutUkgCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg), count, timeoutMs);
   }
 
-  async scrollMoreNavigationOptionsButtonIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.moreNavigationOptionsButton));
-  }
-
-  async longPressNotFollowing(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing));
-  }
-
-  async expectNotFollowingHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs);
-  }
-
-  async expectNotFollowingText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), expected, timeoutMs);
-  }
-
-  async expectNotFollowingContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), substring, timeoutMs);
-  }
-
-  async expectNotFollowingValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), value, timeoutMs);
-  }
-
-  async expectNotFollowingEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs);
-  }
-
-  async expectNotFollowingDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs);
-  }
-
-  async expectNotFollowingChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs);
-  }
-
-  async expectNotFollowingUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs);
-  }
-
-  async expectNotFollowingFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), timeoutMs);
-  }
-
-  async expectNotFollowingCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing), count, timeoutMs);
-  }
-
-  async scrollNotFollowingIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.notFollowing));
-  }
-
-  async longPressShare(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share));
-  }
-
-  async expectShareHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs);
-  }
-
-  async expectShareText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), expected, timeoutMs);
-  }
-
-  async expectShareContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), substring, timeoutMs);
-  }
-
-  async expectShareValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), value, timeoutMs);
-  }
-
-  async expectShareEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs);
-  }
-
-  async expectShareDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs);
-  }
-
-  async expectShareChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs);
-  }
-
-  async expectShareUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs);
-  }
-
-  async expectShareFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), timeoutMs);
-  }
-
-  async expectShareCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share), count, timeoutMs);
-  }
-
-  async scrollShareIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.share));
-  }
-
-  async longPressMore(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more));
-  }
-
-  async expectMoreHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs);
-  }
-
-  async expectMoreText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), expected, timeoutMs);
-  }
-
-  async expectMoreContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), substring, timeoutMs);
-  }
-
-  async expectMoreValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), value, timeoutMs);
-  }
-
-  async expectMoreEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs);
-  }
-
-  async expectMoreDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs);
-  }
-
-  async expectMoreChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs);
-  }
-
-  async expectMoreUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs);
-  }
-
-  async expectMoreFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), timeoutMs);
-  }
-
-  async expectMoreCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more), count, timeoutMs);
-  }
-
-  async scrollMoreIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.more));
+  async scrollAboutUkgIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.aboutUkg));
   }
 
   async longPressPageAuthorBylineStacy(): Promise<void> {
@@ -2506,52 +2262,52 @@ export class TakeTheNextStepInYourDevelopmentAtUkgPage {
     await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.pageAuthorBylineStacy));
   }
 
-  async longPressOpensCardForStacy(): Promise<void> {
-    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy));
+  async longPressOpensProfileCardFor(): Promise<void> {
+    await longPressWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor));
   }
 
-  async expectOpensCardForStacyHidden(timeoutMs = 30_000): Promise<void> {
-    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs);
+  async expectOpensProfileCardForHidden(timeoutMs = 30_000): Promise<void> {
+    await expectHidden(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs);
   }
 
-  async expectOpensCardForStacyText(expected: string, timeoutMs = 30_000): Promise<void> {
-    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), expected, timeoutMs);
+  async expectOpensProfileCardForText(expected: string, timeoutMs = 30_000): Promise<void> {
+    await expectText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), expected, timeoutMs);
   }
 
-  async expectOpensCardForStacyContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
-    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), substring, timeoutMs);
+  async expectOpensProfileCardForContainsText(substring: string, timeoutMs = 30_000): Promise<void> {
+    await expectContainsText(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), substring, timeoutMs);
   }
 
-  async expectOpensCardForStacyValue(value: string, timeoutMs = 30_000): Promise<void> {
-    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), value, timeoutMs);
+  async expectOpensProfileCardForValue(value: string, timeoutMs = 30_000): Promise<void> {
+    await expectValue(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), value, timeoutMs);
   }
 
-  async expectOpensCardForStacyEnabled(timeoutMs = 30_000): Promise<void> {
-    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs);
+  async expectOpensProfileCardForEnabled(timeoutMs = 30_000): Promise<void> {
+    await expectEnabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs);
   }
 
-  async expectOpensCardForStacyDisabled(timeoutMs = 30_000): Promise<void> {
-    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs);
+  async expectOpensProfileCardForDisabled(timeoutMs = 30_000): Promise<void> {
+    await expectDisabled(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs);
   }
 
-  async expectOpensCardForStacyChecked(timeoutMs = 30_000): Promise<void> {
-    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs);
+  async expectOpensProfileCardForChecked(timeoutMs = 30_000): Promise<void> {
+    await expectChecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs);
   }
 
-  async expectOpensCardForStacyUnchecked(timeoutMs = 30_000): Promise<void> {
-    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs);
+  async expectOpensProfileCardForUnchecked(timeoutMs = 30_000): Promise<void> {
+    await expectUnchecked(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs);
   }
 
-  async expectOpensCardForStacyFocused(timeoutMs = 30_000): Promise<void> {
-    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), timeoutMs);
+  async expectOpensProfileCardForFocused(timeoutMs = 30_000): Promise<void> {
+    await expectFocused(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), timeoutMs);
   }
 
-  async expectOpensCardForStacyCount(count: number, timeoutMs = 30_000): Promise<void> {
-    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy), count, timeoutMs);
+  async expectOpensProfileCardForCount(count: number, timeoutMs = 30_000): Promise<void> {
+    await expectCount(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor), count, timeoutMs);
   }
 
-  async scrollOpensCardForStacyIntoView(): Promise<void> {
-    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensCardForStacy));
+  async scrollOpensProfileCardForIntoView(): Promise<void> {
+    await scrollIntoViewWhenVisible(webLocator(this.page, TakeTheNextStepInYourDevelopmentAtUkgPage.L.opensProfileCardFor));
   }
 
   async clickCareerDevelopmentFocusYourDevelopmentWhereItMattersMost(): Promise<void> {

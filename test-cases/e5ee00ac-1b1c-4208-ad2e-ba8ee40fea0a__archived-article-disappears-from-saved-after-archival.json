@@ -1,0 +1,130 @@
+{
+  "id": "archived-article-disappears-from-saved-after-archival",
+  "testPlanId": "e5ee00ac-1b1c-4208-ad2e-ba8ee40fea0a",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — E2E",
+  "case": {
+    "id": "archived-article-disappears-from-saved-after-archival",
+    "title": "Saved article is removed from 'My saved news' when archived server-side",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA Home",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Home is loaded",
+        "locatorHint": "main"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Save the target article (prepare for archival)",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-icon']"
+      },
+      {
+        "id": "s4",
+        "action": "waitForVisible",
+        "targetDescription": "Saved state indicator on the card is visible",
+        "locatorHint": "[data-testid='news-card']:has-text('Take the next step in your development at UKG') [data-testid='bookmark-icon'][data-state='saved']"
+      },
+      {
+        "id": "s5",
+        "action": "openUrl",
+        "targetDescription": "Open QA Content Manager tool (admin) to archive article",
+        "value": "https://commons-qa.util.ukg.com/qa-tools/content-manager"
+      },
+      {
+        "id": "s6",
+        "action": "waitForVisible",
+        "targetDescription": "Content Manager page loaded",
+        "locatorHint": "[data-testid='content-manager']"
+      },
+      {
+        "id": "s7",
+        "action": "fill",
+        "targetDescription": "Search for the target article by title",
+        "locatorHint": "input[placeholder='Search articles']",
+        "value": "Take the next step in your development at UKG"
+      },
+      {
+        "id": "s8",
+        "action": "waitForVisible",
+        "targetDescription": "Search result row for target article visible",
+        "locatorHint": "[data-testid='cm-row']:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "s9",
+        "action": "tap",
+        "targetDescription": "Tap Archive action",
+        "locatorHint": "[data-testid='cm-row']:has-text('Take the next step in your development at UKG') button:has-text('Archive')"
+      },
+      {
+        "id": "s10",
+        "action": "tap",
+        "targetDescription": "Confirm archival in dialog",
+        "locatorHint": "div[role='dialog'] button:has-text('Archive')"
+      },
+      {
+        "id": "s11",
+        "action": "wait",
+        "targetDescription": "Wait for archival to propagate"
+      },
+      {
+        "id": "s12",
+        "action": "openUrl",
+        "targetDescription": "Navigate to 'My saved news' via URL",
+        "value": "https://commons-qa.util.ukg.com/me/saved-news"
+      },
+      {
+        "id": "s13",
+        "action": "waitForVisible",
+        "targetDescription": "Saved list visible",
+        "locatorHint": "main, [data-testid='saved-news-list']"
+      },
+      {
+        "id": "s14",
+        "action": "assertHidden",
+        "targetDescription": "Archived article no longer appears in saved list",
+        "locatorHint": "[data-testid='saved-news-item']:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "s15",
+        "action": "openUrl",
+        "targetDescription": "Re-open Content Manager to restore article (cleanup)",
+        "value": "https://commons-qa.util.ukg.com/qa-tools/content-manager"
+      },
+      {
+        "id": "s16",
+        "action": "fill",
+        "targetDescription": "Search for archived article",
+        "locatorHint": "input[placeholder='Search articles']",
+        "value": "Take the next step in your development at UKG"
+      },
+      {
+        "id": "s17",
+        "action": "waitForVisible",
+        "targetDescription": "Archived row visible",
+        "locatorHint": "[data-testid='cm-row']:has-text('Take the next step in your development at UKG')"
+      },
+      {
+        "id": "s18",
+        "action": "tap",
+        "targetDescription": "Unarchive/Restore the article",
+        "locatorHint": "[data-testid='cm-row']:has-text('Take the next step in your development at UKG') button:has-text('Restore')"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "navigate-to-my-saved-news-from-profile-menu",
+  "testPlanId": "e5ee00ac-1b1c-4208-ad2e-ba8ee40fea0a",
+  "requirementId": "72e65a65-bcce-4f10-ba6b-fedeebd56b66",
+  "suiteName": "Save News Article Card — E2E",
+  "case": {
+    "id": "navigate-to-my-saved-news-from-profile-menu",
+    "title": "Access 'My saved news' from profile icon",
+    "priority": "P2",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "s1",
+        "action": "openUrl",
+        "targetDescription": "Open Commons QA Home",
+        "value": "https://commons-qa.util.ukg.com/"
+      },
+      {
+        "id": "s2",
+        "action": "waitForVisible",
+        "targetDescription": "Home is loaded",
+        "locatorHint": "main"
+      },
+      {
+        "id": "s3",
+        "action": "tap",
+        "targetDescription": "Tap profile/avatar icon",
+        "locatorHint": "[data-testid='profile-avatar']"
+      },
+      {
+        "id": "s4",
+        "action": "assertVisible",
+        "targetDescription": "Profile menu is visible",
+        "locatorHint": "nav[role='menu']"
+      },
+      {
+        "id": "s5",
+        "action": "tap",
+        "targetDescription": "Select 'My saved news' menu item",
+        "locatorHint": "a[role='menuitem']:has-text('My saved news')"
+      },
+      {
+        "id": "s6",
+        "action": "waitForVisible",
+        "targetDescription": "'My saved news' page loaded",
+        "locatorHint": "main h1, [data-testid='saved-news-heading']"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression"
+    ]
+  }
+}
